@@ -1,0 +1,49 @@
+#container {
+  width: 350px;
+  height: 350px;
+  margin: 10px auto;
+  border: 1px solid rgba(0, 0, 0, 0.056);
+  position: relative;
+  border-radius: 50%;
+  animation: spin 25s linear infinite;
+}
+.item {
+  width: 150px;
+  height: 150px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  background: #F6F6F6;
+  animation: spin 25s linear infinite reverse;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.041);
+  transition: all 0.5s;
+}
+.item h6{
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.534);
+  position: relative;
+  top: 27px;
+  z-index: 9000;
+
+}
+.item img{
+  width: 120px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 20px;
+}
+
+/* #container:hover > .item,
+#container:hover {
+  animation-duration: 99s;
+}   */
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}

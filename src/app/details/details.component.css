@@ -1,66 +1,51 @@
-.button{
-    border-radius: 0px;
-    padding: 15px 7px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    background-color: #444242;
-    /* max-width: 300px; */
-    min-width: 300px;
-    width: 100%;
-    color: #fff;
-    font-size: 18px;
-    text-align:left;
+#container {
+  width: 550px;
+  height: 550px;
+  margin: 10px auto;
+  border: 1px solid rgba(251, 156, 156, 0.056);
+  position: relative;
+  border-radius: 50%;
+  /* animation: spin 25s linear infinite; */
 }
-.button:focus {
-    box-shadow: 0 0 0 0;
+.item {
+  width: 150px;
+  height: 150px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0 12px 24px 0 rgb(13 13 13 / 6%);
+  /* animation: spin 25s linear infinite reverse; */
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.041);
+  transition: all 0.5s;
+  /* To get items in center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.collapse1{
-    /* max-width: 300px;
-    min-width: 300px; */
+.item h6 {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.534);
+  text-transform: capitalize;
+  font-weight: 400;
 }
-.card{
-    border-radius: 0;
-}
-
-
-
-.modifications{
-  display: flex;  
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
-.modifications li {
-    width:60px;
-    margin: 0 5px 3px 0;  
-}
-
-.modifications li a {
-    text-decoration: none;
-    font-size: 10px;
-    color: #0E0E0E;
-
+.item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -25px;
 }
 
-.modifications li a img {
-    
-    width: 44px;
-    height: 44px;
-    border: 1px solid #ababae;
-    border-radius: 3px;
-    background-color: #d2d3d3;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100%;
-}
+/* #container:hover > .item,
+#container:hover {
+  animation-duration: 99s;
+}   */
 
-.kirby-skive input{
-    width: 55px;
-    border-radius: 0px;
-    padding: 1px 6px;
-}
-
-h6{
-    font-size: 12px;
-    color: red;
-    letter-spacing:.2px;
-}
+/* @keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+} */

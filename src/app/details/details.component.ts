@@ -1,106 +1,58 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
+import * as Aos from 'aos';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
   options: any;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    this.options = this.route.snapshot.paramMap.get('options');
+  ngOnInit() {
+    Aos.init();
+    $(function () {
+      let activatedRoute = window.location.pathname;
+      if (activatedRoute.includes('topcovers')) {
+        $('#topcovers > .item').removeAttr('style');
+        $('#middlayer > .item').css('display', 'none');
+
+      } else if (activatedRoute.includes('middlelayer')) {
+        $('#middlayer > .item').removeAttr('style');
+        $('#topcovers > .item').css('display', 'none');
+      } else{
+        $('#middlayer > .item').css('display', 'none');
+        $('#topcovers > .item').css('display', 'none');
+      }
+
+      let radius = 250;
+      let fields = $('.item'),
+        fieldslenght: any = fields.length,
+        container = $('#container'),
+        width = container.width(),
+        height = container.height();
+      // checking if item have dsiplay none css property then remove ot from fields length
+      let data: any = fields.filter(function () {
+        return $(this).css('display') !== 'none';
+      });
+      fieldslenght = data.length;
+      let angle = 0,
+        step = (2 * Math.PI) / fieldslenght;
+      fields.each(function () {
+        let x = Math.round(
+          width! / 2 + radius * Math.cos(angle) - $(this).width()! / 2
+        );
+
+        let y = Math.round(
+          height! / 2 + radius * Math.sin(angle) - $(this).height()! / 2
+        );
+        $(this).css({
+          left: x + 'px',
+          top: y + 'px',
+        });
+        angle += step;
+      });
+    });
   }
-
-  topcovers = [
-    {
-      id: '1',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Vinyl',
-    },
-    {
-      id: '2',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Sports',
-    },
-    {
-      id: '3',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Microcell',
-    },
-    {
-      id: '4',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Leather',
-    },
-    {
-      id: '5',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'X-Static',
-    },
-    {
-      id: '6',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'EVA-Perforated',
-    },
-    {
-      id: '7',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Suede',
-    },
-    {
-      id: '8',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Length',
-    },
-  ]
-  middleLayer = [
-    {
-      id: '1',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Vinyl Black',
-    },
-    {
-      id: '2',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Vinyl Navy',
-    },
-    {
-      id: '3',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Microcell Black',
-    },
-    {
-      id: '4',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Microcell Green',
-    },
-    {
-      id: '5',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Microcell Red',
-    },
-    {
-      id: '6',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Microcell Navy',
-    },
-    {
-      id: '7',
-      imageUrl: '../../assets/vinyl-black.png',
-      title: 'Suede Black',
-    },
-    {
-      id: '8',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Suede Tan',
-    },
-    {
-      id: '9',
-      imageUrl: '../../assets/modifications-img-1.png',
-      title: 'Suede Brown ',
-    },
-  ]
-
 }

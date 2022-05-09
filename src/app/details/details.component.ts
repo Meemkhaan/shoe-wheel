@@ -13,17 +13,14 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     Aos.init();
     $(function () {
+      $('.item').css('display', 'none');
       let activatedRoute = window.location.pathname;
-      if (activatedRoute.includes('topcovers')) {
+      if (activatedRoute.match('topcovers')) {
         $('#topcovers > .item').removeAttr('style');
-        $('#middlayer > .item').css('display', 'none');
-
-      } else if (activatedRoute.includes('middlelayer')) {
+      } else if (activatedRoute.match('middlelayer')) {
         $('#middlayer > .item').removeAttr('style');
-        $('#topcovers > .item').css('display', 'none');
-      } else{
-        $('#middlayer > .item').css('display', 'none');
-        $('#topcovers > .item').css('display', 'none');
+      } else if (activatedRoute.match('shell')){
+        $('#shell > .item').removeAttr('style');
       }
 
       let radius = 250;

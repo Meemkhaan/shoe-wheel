@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import * as Aos from 'aos';
 @Component({
   selector: 'app-sub-details',
   templateUrl: './sub-details.component.html',
@@ -7,81 +8,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubDetailsComponent implements OnInit {
   constructor() {}
- tested = false;
+  
   ngOnInit() {
+    Aos.init();
     $(function () {
-      // TODO: ADD CONDITIONL CLASS OF NG CLASS INSTEAD OF THIS JQUERY CODE
-      let activatedRoute = window.location.pathname;
+      $('.item').css('display', 'none');
 
-      if (activatedRoute.includes('vinyl')) {
+      let activatedRoute = window.location.pathname;
+      //! ALL TOPCOVERS FIELDS CONDITION BASED ON ROUTE PARAM
+      if (activatedRoute.match('tc-vinyl')) {
+        console.log("mathceddd");
+        
         $('#vinyl > .item').removeAttr('style');
-        $(`#sports > .item,
-          #microcell > .item,
-          #leather > .item,
-          #evaperferated > .item,
-          #xstatic > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('sports')) {
+      } else if (activatedRoute.match('tc-sports')) {
         $('#sports > .item').removeAttr('style');
-        $(`#vinyl > .item,
-          #microcell > .item,
-          #leather > .item,
-          #evaperferated > .item,
-          #xstatic > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('microcell')) {
+      } else if (activatedRoute.match('tc-microcell')) {
         $('#microcell > .item').removeAttr('style');
-        $(`#sports > .item,
-          #vinyl > .item,
-          #leather > .item,
-          #evaperferated > .item,
-          #xstatic > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('leather')) {
+      } else if (activatedRoute.match('tc-leather')) {
         $('#leather > .item').removeAttr('style');
-        $(`#sports > .item,
-          #microcell > .item,
-          #vinyl > .item,
-          #evaperferated > .item,
-          #xstatic > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('evaperferated')) {
+      } else if (activatedRoute.match('tc-evaperferated')) {
         $('#evaperferated > .item').removeAttr('style');
-        $(`#sports > .item,
-          #microcell > .item,
-          #vinyl > .item,
-          #leather > .item,
-          #xstatic > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('xstatic')) {
+      } else if (activatedRoute.match('tc-xstatic')) {
         $('#xstatic > .item').removeAttr('style');
-        $(`#sports > .item,
-          #microcell > .item,
-          #vinyl > .item,
-          #leather > .item,
-          #evaperferated > .item,
-          #suedo > .item
-          `).css('display', 'none');
-      }
-      else if (activatedRoute.includes('sudeo')) {
+      } else if (activatedRoute.match('tc-sudeo')) {
         $('#suedo > .item').removeAttr('style');
-        $(`#sports > .item,
-          #microcell > .item,
-          #vinyl > .item,
-          #leather > .item,
-          #evaperferated > .item,
-          #xstatic > .item
-          `).css('display', 'none');
+      }
+      //! ALL MIDDLE LAYER FIELDS CONDITION BASED ON ROUTE PARAM
+      if (activatedRoute.match('mi--vinyl')) {
+        $('#mi-vinyl > .item').removeAttr('style');
+      } else if (activatedRoute.match('mi--suede')){
+        $('#mi-suede > .item').removeAttr('style');
+      } else if (activatedRoute.match('mi--microcell')){
+        $('#mi-microcell > .item').removeAttr('style');
+      }
+
+      //! ALL SHEEL TYPES AND CUSION FIELDS BASED ON ROUTE PARAM
+
+      if(activatedRoute.match('sheel-types-cushion')){
+        $('#sheel-types-cushion > .item').removeAttr('style');
       }
 
       let radius = 250;
@@ -111,4 +75,7 @@ export class SubDetailsComponent implements OnInit {
       });
     });
   }
+  onItemChange(value:any){
+    console.log(value );
+ }
 }

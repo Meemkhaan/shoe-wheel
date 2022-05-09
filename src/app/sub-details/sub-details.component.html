@@ -2,11 +2,11 @@
   <div class="row justify-content-center">
     <div class="col-md-9">
       <div class="bg-white" style="margin-top: 15px; padding: 55px 50px">
-        <div id="container" style="background-color: #F8FAFD">
-        <!--! ALL SUB OPTIONS OF TOPCOVERS -->
+        <div id="container" style="background-color: #f8fafd">
+          <!--! ALL SUB OPTIONS OF TOPCOVERS -->
           <!--VINYL OPTIONS -->
           <div id="vinyl">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -17,7 +17,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -28,7 +28,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -39,23 +39,26 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
+                  (change)="onItemChange($event.target.value)"
                 />
                 <label class="form-check-label"> Red </label>
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
+                  value="Grey"
+                  (change)="onItemChange($event.target.value)"
                 />
                 <label class="form-check-label"> Grey </label>
               </div>
@@ -63,7 +66,7 @@
           </div>
           <!--SPORTS OPTIONS -->
           <div id="sports">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -74,7 +77,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -84,7 +87,7 @@
                 <label class="form-check-label"> Navy </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -95,7 +98,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -106,7 +109,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -119,7 +122,7 @@
           </div>
           <!--MICROCELL OPTIONS -->
           <div id="microcell">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -129,7 +132,7 @@
                 <label class="form-check-label"> Black </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -140,7 +143,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -150,7 +153,7 @@
                 <label class="form-check-label"> Red </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -160,7 +163,7 @@
                 <label class="form-check-label"> Green </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -170,7 +173,7 @@
                 <label class="form-check-label"> Brown </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -183,7 +186,7 @@
           </div>
           <!--LEATHER OPTIONS -->
           <div id="leather">
-            <a class="item ">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -194,7 +197,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -205,7 +208,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -218,7 +221,7 @@
           </div>
           <!--EVA PERFERATED OPTIONS -->
           <div id="evaperferated">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -229,7 +232,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -242,7 +245,7 @@
           </div>
           <!--X STATIC OPTIONS -->
           <div id="xstatic">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -255,7 +258,7 @@
           </div>
           <!--SUEDO OPTIONS -->
           <div id="suedo">
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -266,7 +269,7 @@
               </div>
             </a>
 
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -276,7 +279,7 @@
                 <label class="form-check-label"> Tan </label>
               </div>
             </a>
-            <a class="item">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -288,8 +291,125 @@
             </a>
           </div>
 
-         <!--! ALL SUB OPTIONS OF Underlay -->
+          <!--! ALL SUB OPTIONS OF Underlay -->
+          <div id="mi-vinyl">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Black </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Navy </label>
+              </div>
+            </a>
+          </div>
 
+          <div id="mi-suede">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Black </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Tan </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Brown </label>
+              </div>
+            </a>
+          </div>
+
+          <div id="mi-microcell">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Black </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Green </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Red </label>
+              </div>
+            </a>
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label"> Navy </label>
+              </div>
+            </a>
+          </div>
+
+          <!--! Types of Shell and Cushion -->
+
+          <div id="sheel-types-cushion">
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+                <h6> Deep Heel Cup </h6>
+            </a>
+
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <h6> Length </h6>
+            </a>
+
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <h6> Cusion </h6>
+            </a>
+
+            <a class="item" data-aos="zoom-in" data-aos-duration="700">
+              <h6> Types Of Shell </h6>
+            </a>
+          </div>
         </div>
       </div>
     </div>

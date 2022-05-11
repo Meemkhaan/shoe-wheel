@@ -10,10 +10,6 @@ export class SubDetailsComponent implements OnInit, AfterViewInit {
   constructor(private FormBuilder: FormBuilder) {}
   thirdLayerOptions!:FormGroup
   @ViewChild('thirdLayerForm') thirdLayerForms!:ElementRef;
-  ngAfterViewInit() {
-    console.log(this.thirdLayerForms);
-    
-  }
   ngOnInit() {
     this.thirdLayerOptions = this.FormBuilder.group({
       vinylopt: [''],
@@ -92,11 +88,9 @@ export class SubDetailsComponent implements OnInit, AfterViewInit {
       });
     });
   }
-
-  get f(){
-    console.log(this.thirdLayerOptions.controls);
+  ngAfterViewInit() {
+    console.log(this.thirdLayerForms.nativeElement);
     
-    return this.thirdLayerOptions.controls;
   }
 
 }

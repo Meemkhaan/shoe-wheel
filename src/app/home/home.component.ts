@@ -38,26 +38,5 @@ export class HomeComponent implements OnInit {
       });
     });
 
-
-    // Click event logic
-    // $(function () {
-    //   var $curr = $( "#previous" );
-    //   $curr.css( "display", "none" );
-    //   $(".topcovers").click(function () {
-    //    $("#initial > .item").css({
-    //     "display": "none",
-    //    })
-
-    //    $("#topcovers > .item").css({
-    //     "display": "block" 
-    //    })
-
-    //    $("#previous").click(function () {
-    //     $curr = $curr.prev();
-    //    })
-    //   })
-
-    // });
-
   }
 }

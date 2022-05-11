@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as Aos from 'aos';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -11,16 +10,15 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    Aos.init();
     $(function () {
-      $('.item').css('display', 'none');
+      $('.item').hide();
       let activatedRoute = window.location.pathname;
       if (activatedRoute.match('topcovers')) {
-        $('#topcovers > .item').removeAttr('style');
+        $('#topcovers > .item').show();
       } else if (activatedRoute.match('middlelayer')) {
-        $('#middlayer > .item').removeAttr('style');
+        $('#middlayer > .item').show();
       } else if (activatedRoute.match('shell')){
-        $('#shell > .item').removeAttr('style');
+        $('#shell > .item').show();
       }
 
       let radius = 250;

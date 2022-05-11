@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { SubDetailsComponent } from './sub-details/sub-details.component';
 import { FourthLayerOptionsComponent } from './fourth-layer-options/fourth-layer-options.component';
-import { NgxUiLoaderConfig, NgxUiLoaderModule, NgxUiLoaderRouterModule } from "ngx-ui-loader";
+
 
 
 
@@ -25,10 +25,7 @@ import { NgxUiLoaderConfig, NgxUiLoaderModule, NgxUiLoaderRouterModule } from "n
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    // NgxUiLoaderModule,
-    // NgxUiLoaderRouterModule ,
-    // NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

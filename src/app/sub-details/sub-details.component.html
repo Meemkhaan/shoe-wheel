@@ -1,416 +1,441 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-9">
-      <div class="bg-white" style="margin-top: 15px; padding: 55px 50px">
-        <div id="container" style="background-color: #f8fafd">
-          <!--! ALL SUB OPTIONS OF TOPCOVERS -->
-          <!--VINYL OPTIONS -->
-          <div id="vinyl">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Brown </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  (change)="onItemChange($event.target.value)"
-                />
-                <label class="form-check-label"> Red </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  value="Grey"
-                  (change)="onItemChange($event.target.value)"
-                />
-                <label class="form-check-label"> Grey </label>
-              </div>
-            </a>
+      <div class="bg-white"  style="margin-top: 15px; padding: 55px 40px 250px 40px">
+        <form>
+          <div id="container" style="background-color: #f8fafd">
+            <!--! ALL SUB OPTIONS OF TOPCOVERS -->
+            <!--VINYL OPTIONS -->
+            <div id="vinyl">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vinylopt"
+                    formControlName="vinylopt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vinylopt"
+                    formControlName="vinylopt"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vinylopt"
+                    formControlName="vinylopt"
+                  />
+                  <label class="form-check-label"> Brown </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vinylopt"
+                    formControlName="vinylopt"
+                  />
+                  <label class="form-check-label"> Red </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="vinylopt"
+                    formControlName="vinylopt"
+                    
+                  />
+                  <label class="form-check-label"> Grey </label>
+                </div>
+              </a>
+            </div>
+            <!--SPORTS OPTIONS -->
+            <div id="sports">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sportsopt"
+                    formControlName="sportsopt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sportsopt"
+                    formControlName="sportsopt"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sportsopt"
+                    formControlName="sportsopt"
+                  />
+                  <label class="form-check-label"> Green </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sportsopt"
+                    formControlName="sportsopt"
+                  />
+                  <label class="form-check-label"> Red </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="sportsopt"
+                    formControlName="sportsopt"
+                  />
+                  <label class="form-check-label"> Bamboo </label>
+                </div>
+              </a>
+            </div>
+            <!--MICROCELL OPTIONS -->
+            <div id="microcell">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Red </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Green </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Brown </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="microcellopt"
+                    formControlName="microcellopt"
+                  />
+                  <label class="form-check-label"> Yellow </label>
+                </div>
+              </a>
+            </div>
+            <!--LEATHER OPTIONS -->
+            <div id="leather">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="leatheropt"
+                    formControlName="leatheropt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="leatheropt"
+                    formControlName="leatheropt"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="leatheropt"
+                    formControlName="leatheropt"
+                  />
+                  <label class="form-check-label"> Green </label>
+                </div>
+              </a>
+            </div>
+            <!--EVA PERFERATED OPTIONS -->
+            <div id="evaperferated">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="evaperferatedopt"
+                    formControlName="evaperferated"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="evaperferatedopt"
+                    formControlName="evaperferated"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+            </div>
+            <!--X STATIC OPTIONS -->
+            <div id="xstatic">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="xstaticopt"
+                    formControlName="xstaticopt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+            </div>
+            <!--SUEDO OPTIONS -->
+            <div id="suedo">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="suedoopt"
+                    formControlName="suedoopt"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+  
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="suedoopt"
+                    formControlName="suedoopt"
+                  />
+                  <label class="form-check-label"> Tan </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="suedoopt"
+                    formControlName="suedoopt"
+                  />
+                  <label class="form-check-label"> Brown </label>
+                </div>
+              </a>
+            </div>
+  
+            <!--! ALL SUB OPTIONS OF Underlay -->
+            <div id="mi-vinyl">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+            </div>
+  
+            <div id="mi-suede">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Tan </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Brown </label>
+                </div>
+              </a>
+            </div>
+  
+            <div id="mi-microcell">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Black </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Green </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Red </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                  />
+                  <label class="form-check-label"> Navy </label>
+                </div>
+              </a>
+            </div>
+  
+            <!--! Types of Shell and Cushion -->
+  
+            <div id="sheel-types-cushion">
+              <a class="item" routerLink="deep-heel-cup">
+                  <h6> Deep Heel Cup </h6>
+              </a>
+  
+              <a class="item"  routerLink="length">
+                <h6> Length </h6>
+              </a>
+  
+              <a class="item"  routerLink="cusion">
+                <h6> Cusion </h6>
+              </a>
+  
+              <a class="item"  routerLink="types-of-sheel">
+                <h6> Types Of Shell </h6>
+              </a>
+            </div>
           </div>
-          <!--SPORTS OPTIONS -->
-          <div id="sports">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Green </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Red </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Bamboo </label>
-              </div>
-            </a>
-          </div>
-          <!--MICROCELL OPTIONS -->
-          <div id="microcell">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Red </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Green </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Brown </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Yellow </label>
-              </div>
-            </a>
-          </div>
-          <!--LEATHER OPTIONS -->
-          <div id="leather">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Green </label>
-              </div>
-            </a>
-          </div>
-          <!--EVA PERFERATED OPTIONS -->
-          <div id="evaperferated">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-          </div>
-          <!--X STATIC OPTIONS -->
-          <div id="xstatic">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-          </div>
-          <!--SUEDO OPTIONS -->
-          <div id="suedo">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Tan </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Brown </label>
-              </div>
-            </a>
-          </div>
-
-          <!--! ALL SUB OPTIONS OF Underlay -->
-          <div id="mi-vinyl">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-          </div>
-
-          <div id="mi-suede">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Tan </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Brown </label>
-              </div>
-            </a>
-          </div>
-
-          <div id="mi-microcell">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Black </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Green </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Red </label>
-              </div>
-            </a>
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Navy </label>
-              </div>
-            </a>
-          </div>
-
-          <!--! Types of Shell and Cushion -->
-
-          <div id="sheel-types-cushion">
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-                <h6> Deep Heel Cup </h6>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <h6> Length </h6>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <h6> Cusion </h6>
-            </a>
-
-            <a class="item" data-aos="zoom-in" data-aos-duration="700">
-              <h6> Types Of Shell </h6>
-            </a>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

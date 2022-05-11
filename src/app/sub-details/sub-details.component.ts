@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as Aos from 'aos';
 @Component({
   selector: 'app-sub-details',
   templateUrl: './sub-details.component.html',
@@ -10,42 +9,41 @@ export class SubDetailsComponent implements OnInit {
   constructor() {}
   
   ngOnInit() {
-    Aos.init();
     $(function () {
-      $('.item').css('display', 'none');
+      $('.item').hide();
 
       let activatedRoute = window.location.pathname;
       //! ALL TOPCOVERS FIELDS CONDITION BASED ON ROUTE PARAM
       if (activatedRoute.match('tc-vinyl')) {
         console.log("mathceddd");
         
-        $('#vinyl > .item').removeAttr('style');
+        $('#vinyl > .item').hide();
       } else if (activatedRoute.match('tc-sports')) {
-        $('#sports > .item').removeAttr('style');
+        $('#sports > .item').hide();
       } else if (activatedRoute.match('tc-microcell')) {
-        $('#microcell > .item').removeAttr('style');
+        $('#microcell > .item').hide();
       } else if (activatedRoute.match('tc-leather')) {
-        $('#leather > .item').removeAttr('style');
+        $('#leather > .item').hide();
       } else if (activatedRoute.match('tc-evaperferated')) {
-        $('#evaperferated > .item').removeAttr('style');
+        $('#evaperferated > .item').hide();
       } else if (activatedRoute.match('tc-xstatic')) {
-        $('#xstatic > .item').removeAttr('style');
+        $('#xstatic > .item').hide();
       } else if (activatedRoute.match('tc-sudeo')) {
-        $('#suedo > .item').removeAttr('style');
+        $('#suedo > .item').hide();
       }
       //! ALL MIDDLE LAYER FIELDS CONDITION BASED ON ROUTE PARAM
       if (activatedRoute.match('mi--vinyl')) {
-        $('#mi-vinyl > .item').removeAttr('style');
+        $('#mi-vinyl > .item').hide();
       } else if (activatedRoute.match('mi--suede')){
-        $('#mi-suede > .item').removeAttr('style');
+        $('#mi-suede > .item').hide();
       } else if (activatedRoute.match('mi--microcell')){
-        $('#mi-microcell > .item').removeAttr('style');
+        $('#mi-microcell > .item').hide();
       }
 
       //! ALL SHEEL TYPES AND CUSION FIELDS BASED ON ROUTE PARAM
 
       if(activatedRoute.match('sheel-types-cushion')){
-        $('#sheel-types-cushion > .item').removeAttr('style');
+        $('#sheel-types-cushion > .item').hide();
       }
 
       let radius = 250;

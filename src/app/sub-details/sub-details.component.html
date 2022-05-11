@@ -2,265 +2,86 @@
   <div class="row justify-content-center">
     <div class="col-md-9">
       <div class="bg-white"  style="margin-top: 15px; padding: 55px 40px 250px 40px">
-        <form [formGroup]="thirdLayerOptions" #thirdLayerForm>
+        <form >
           <div id="container" style="background-color: #f8fafd">
             <!--! ALL SUB OPTIONS OF TOPCOVERS -->
             <!--VINYL OPTIONS -->
-            <div id="vinyl">
-              <a class="item">
+            <div id="vinyl" >
+              <a class="item" *ngFor="let options of tc_vinyl_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="vinylopts"
-                    value="Black"
-                    formControlName="vinylopt"
+                    [value]="options.value"
+                    (change)="onItemChange($event.target.value)"
+                    [checked]="tc_vinyl == options.value"
                   />
-                  <label class="form-check-label"> Black </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="vinylopts"
-                    formControlName="vinylopt"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="vinylopts"
-                    formControlName="vinylopt"
-                  />
-                  <label class="form-check-label"> Brown </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="vinylopts"
-                    formControlName="vinylopt"
-                  />
-                  <label class="form-check-label"> Red </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="vinylopts"
-                    formControlName="vinylopt"
-                    
-                  />
-                  <label class="form-check-label"> Grey </label>
+                  <label class="form-check-label"> {{options.value}} </label>
                 </div>
               </a>
             </div>
             <!--SPORTS OPTIONS -->
-            <div id="sports">
+            <div id="sports" *ngFor="let options of tc_sports_options">
               <a class="item">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="sportsopts"
-                    formControlName="sportsopt"
+                    [value]="options.value"
+                    (change)="onItemChange1($event.target.value)"
+                    [checked]="tc_sports == options.value"
                   />
-                  <label class="form-check-label"> Black </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="sportsopts"
-                    formControlName="sportsopt"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="sportsopts"
-                    formControlName="sportsopt"
-                  />
-                  <label class="form-check-label"> Green </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="sportsopts"
-                    formControlName="sportsopt"
-                  />
-                  <label class="form-check-label"> Red </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="sportsopts"
-                    formControlName="sportsopt"
-                  />
-                  <label class="form-check-label"> Bamboo </label>
+                  <label class="form-check-label"> {{options.value}} </label>
                 </div>
               </a>
             </div>
             <!--MICROCELL OPTIONS -->
             <div id="microcell">
-              <a class="item">
+              <a class="item" *ngFor="let options of tc_microcell_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="microcellopts"
-                    formControlName="microcellopt"
+                    [value]="options.value"
+                    (change)="onItemChange2($event.target.value)"
+                    [checked]="tc_microcell == options.value"
                   />
-                  <label class="form-check-label"> Black </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="microcellopts"
-                    formControlName="microcellopt"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="microcellopts"
-                    formControlName="microcellopt"
-                  />
-                  <label class="form-check-label"> Red </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="microcellopts"
-                    formControlName="microcellopt"
-                  />
-                  <label class="form-check-label"> Green </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="microcellopts"
-                    formControlName="microcellopt"
-                  />
-                  <label class="form-check-label"> Brown </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="microcellopts"
-                    formControlName="microcellopt"
-                  />
-                  <label class="form-check-label"> Yellow </label>
+                  <label class="form-check-label"> {{options.value}} </label>
                 </div>
               </a>
             </div>
             <!--LEATHER OPTIONS -->
             <div id="leather">
-              <a class="item">
+              <a class="item" *ngFor="let options of tc_leather_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="leatheropts"
-                    formControlName="leatheropt"
+                    [value]="options.value"
+                    (change)="onItemChange3($event.target.value)"
+                    [checked]="tc_leather == options.value"
                   />
-                  <label class="form-check-label"> Black </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="leatheropts"
-                    formControlName="leatheropt"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="leatheropts"
-                    formControlName="leatheropt"
-                  />
-                  <label class="form-check-label"> Green </label>
+                  <label class="form-check-label"> {{options.value}}  </label>
                 </div>
               </a>
             </div>
             <!--EVA PERFERATED OPTIONS -->
             <div id="evaperferated">
-              <a class="item">
+              <a class="item" *ngFor="let options of tc_evaperferated_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="evaperferatedopts"
-                    formControlName="evaperferatedopt"
+                    [value]="options.value"
+                    (change)="onItemChange4($event.target.value)"
+                    [checked]="tc_evaperferated == options.value"
                   />
-                  <label class="form-check-label"> Black </label>
-                </div>
-              </a>
-  
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="evaperferatedopts"
-                    formControlName="evaperferatedopt"
-                  />
-                  <label class="form-check-label"> Navy </label>
+                  <label class="form-check-label"> {{options.value}} </label>
                 </div>
               </a>
             </div>
@@ -272,7 +93,8 @@
                     class="form-check-input"
                     type="radio"
                     name="xstaticopts"
-                    formControlName="xstaticopt"
+                    value="Black"
+                    (change)="onItemChange5($event.target.value)"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -286,7 +108,6 @@
                     class="form-check-input"
                     type="radio"
                     name="suedoopts"
-                    formControlName="suedoopt"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -298,7 +119,6 @@
                     class="form-check-input"
                     type="radio"
                     name="suedoopts"
-                    formControlName="suedoopt"
                   />
                   <label class="form-check-label"> Tan </label>
                 </div>
@@ -309,7 +129,6 @@
                     class="form-check-input"
                     type="radio"
                     name="suedoopts"
-                    formControlName="suedoopt"
                   />
                   <label class="form-check-label"> Brown </label>
                 </div>
@@ -324,7 +143,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mivinylopts"
-                    formControlName="mivinylopt"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -335,7 +153,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mivinylopts"
-                    formControlName="mivinylopt"
                   />
                   <label class="form-check-label"> Navy </label>
                 </div>
@@ -349,7 +166,6 @@
                     class="form-check-input"
                     type="radio"
                     name="misuedeopts"
-                    formControlName="misuedeopt"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -360,7 +176,6 @@
                     class="form-check-input"
                     type="radio"
                     name="misuedeopts"
-                    formControlName="misuedeopt"
                   />
                   <label class="form-check-label"> Tan </label>
                 </div>
@@ -371,7 +186,6 @@
                     class="form-check-input"
                     type="radio"
                     name="misuedeopts"
-                    formControlName="misuedeopt"
                   />
                   <label class="form-check-label"> Brown </label>
                 </div>
@@ -385,7 +199,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mimicrocellopts"
-                    formControlName="mimicrocellopt"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -396,7 +209,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mimicrocellopts"
-                    formControlName="mimicrocellopt"
                   />
                   <label class="form-check-label"> Green </label>
                 </div>
@@ -407,7 +219,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mimicrocellopts"
-                    formControlName="mimicrocellopt"
                   />
                   <label class="form-check-label"> Red </label>
                 </div>
@@ -418,7 +229,6 @@
                     class="form-check-input"
                     type="radio"
                     name="mimicrocellopts"
-                    formControlName="mimicrocellopt"
                   />
                   <label class="form-check-label"> Navy </label>
                 </div>

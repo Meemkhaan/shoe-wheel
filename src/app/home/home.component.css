@@ -41,8 +41,8 @@
   animation-duration: 99s;
 }   */
 
-  @keyframes spin {
+  /* @keyframes spin {
     100% {
       transform: rotate(1turn);
     }
-  }
+  } */

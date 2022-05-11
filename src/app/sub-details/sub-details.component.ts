@@ -1,43 +1,62 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import{FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-sub-details',
   templateUrl: './sub-details.component.html',
   styleUrls: ['./sub-details.component.css'],
 })
-export class SubDetailsComponent implements OnInit {
-  constructor() {}
-  
+export class SubDetailsComponent implements OnInit, AfterViewInit {
+  constructor(private FormBuilder: FormBuilder) {}
+  thirdLayerOptions!:FormGroup
+  @ViewChild('thirdLayerForm') thirdLayerForms!:ElementRef;
+  ngAfterViewInit() {
+    console.log(this.thirdLayerForms);
+    
+  }
   ngOnInit() {
+    this.thirdLayerOptions = this.FormBuilder.group({
+      vinylopt: [''],
+      sportsopt: [''],
+      microcellopt: [''],
+      leatheropt: [''],
+      evaperferatedopt: [''],
+      xstaticopt: [''],
+      suedoopt:[''],
+      //! Underlay
+      mivinylopt: [''],
+      misuedeopt: [''],
+      //! Microcell
+      mimicrocellopt: [''], 
+    })
+
     $(function () {
       $('.item').hide();
 
       let activatedRoute = window.location.pathname;
       //! ALL TOPCOVERS FIELDS CONDITION BASED ON ROUTE PARAM
       if (activatedRoute.match('tc-vinyl')) {
-        console.log("mathceddd");
-        
-        $('#vinyl > .item').hide();
+        $('#vinyl > .item').show();
       } else if (activatedRoute.match('tc-sports')) {
-        $('#sports > .item').hide();
+        $('#sports > .item').show();
       } else if (activatedRoute.match('tc-microcell')) {
-        $('#microcell > .item').hide();
+        $('#microcell > .item').show();
       } else if (activatedRoute.match('tc-leather')) {
-        $('#leather > .item').hide();
+        $('#leather > .item').show();
       } else if (activatedRoute.match('tc-evaperferated')) {
-        $('#evaperferated > .item').hide();
+        $('#evaperferated > .item').show();
       } else if (activatedRoute.match('tc-xstatic')) {
-        $('#xstatic > .item').hide();
+        $('#xstatic > .item').show();
       } else if (activatedRoute.match('tc-sudeo')) {
-        $('#suedo > .item').hide();
+        $('#suedo > .item').show();
       }
       //! ALL MIDDLE LAYER FIELDS CONDITION BASED ON ROUTE PARAM
       if (activatedRoute.match('mi--vinyl')) {
-        $('#mi-vinyl > .item').hide();
+        $('#mi-vinyl > .item').show();
       } else if (activatedRoute.match('mi--suede')){
-        $('#mi-suede > .item').hide();
+        $('#mi-suede > .item').show();
       } else if (activatedRoute.match('mi--microcell')){
-        $('#mi-microcell > .item').hide();
+        $('#mi-microcell > .item').show();
       }
 
       //! ALL SHEEL TYPES AND CUSION FIELDS BASED ON ROUTE PARAM
@@ -73,7 +92,11 @@ export class SubDetailsComponent implements OnInit {
       });
     });
   }
-  onItemChange(value:any){
-    console.log(value );
- }
+
+  get f(){
+    console.log(this.thirdLayerOptions.controls);
+    
+    return this.thirdLayerOptions.controls;
+  }
+
 }

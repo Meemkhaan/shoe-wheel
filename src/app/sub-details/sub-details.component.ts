@@ -24,6 +24,7 @@ export class SubDetailsComponent implements OnInit {
   tc_leather: any;
   tc_evaperferated: any;
   tc_xstatic: any;
+  tc_suedo: any;
   constructor(private FormBuilder: FormBuilder) {}
   thirdLayerOptions!: FormGroup;
   ngOnInit() {
@@ -33,6 +34,9 @@ export class SubDetailsComponent implements OnInit {
     this.tc_leather = localStorage.getItem('tc_leather_options');
     this.tc_evaperferated = localStorage.getItem('tc_evaperferated_options');
     this.tc_xstatic = localStorage.getItem('tc_xstatic_options');
+    this.tc_suedo = localStorage.getItem('tc_suedo_options');
+
+  
 
     $(function () {
       $('.item').hide();
@@ -123,6 +127,11 @@ export class SubDetailsComponent implements OnInit {
     localStorage.setItem('tc_xstatic_options', this.tc_xstatic);
   }
 
+  onItemChange6(value: any) {
+    this.tc_suedo = value;
+    localStorage.setItem('tc_sudeo_options', this.tc_suedo);
+  }
+
   //
   tc_vinyl_options = [
     { id: 1, value: 'Black' },
@@ -160,13 +169,9 @@ export class SubDetailsComponent implements OnInit {
     { id: 2, value: 'Navy' },
   ];
 
-  
   tc_suedo_options = [
     { id: 1, value: 'Black' },
     { id: 2, value: 'Tan' },
     { id: 3, value: 'Brown' },
   ];
-
-
-
 }

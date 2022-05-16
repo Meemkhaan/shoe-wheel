@@ -25,6 +25,9 @@ export class SubDetailsComponent implements OnInit {
   tc_evaperferated: any;
   tc_xstatic: any;
   tc_suedo: any;
+  modifications_step_one:boolean = true;
+  modifications_step_two:boolean = false;
+  modifications_step_three:boolean = false;
   constructor(private FormBuilder: FormBuilder) {}
   thirdLayerOptions!: FormGroup;
   ngOnInit() {
@@ -66,10 +69,10 @@ export class SubDetailsComponent implements OnInit {
       }
 
       if (activatedRoute.match('sheel-types-cushion')) {
-        $('#sheel-types-cushion > .item').hide();
+        $('#sheel-types-cushion > .item').show();
       }
 
-      let radius = 250;
+      let radius = 270;
       let fields = $('.item'),
         fieldslenght: any = fields.length,
         container = $('#container'),

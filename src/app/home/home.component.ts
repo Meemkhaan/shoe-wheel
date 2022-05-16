@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     $(function () {
-      let radius = 240;
+      let radius = 270;
       let fields = $('.item'),
         fieldslenght: any = fields.length,
         container = $('#container'),

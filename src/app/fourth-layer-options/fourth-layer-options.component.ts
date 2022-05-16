@@ -22,7 +22,7 @@ export class FourthLayerOptionsComponent implements OnInit {
         $('#sheel-types > .item').show();
       }
 
-      let radius = 250;
+      let radius = 270;
       let fields = $('.item'),
         fieldslenght: any = fields.length,
         container = $('#container'),

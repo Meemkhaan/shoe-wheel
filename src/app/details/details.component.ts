@@ -17,26 +17,28 @@ export class DetailsComponent implements OnInit {
       $('#topcovers > .item').show();
     } else if (activatedRoute.match('middlelayer')) {
       $('#middlayer > .item').show();
-    } else if (activatedRoute.match('shell')) {
+    } else if (activatedRoute.match('shell')) { 
       $('#shell > .item').show();
     } else if (activatedRoute.match('modifications')) {
       let currentTab = 1;
       $('#modification1 > .item').show();
-      let nextBtn = $('.nextBtn');
-      nextBtn.each(function (index, element) {
-        $(this).on('click', function (e) {
-          console.log(e.target);
-          
-        })
-        
-      })
-      $('.nextBtn').click(function () {
+     
+      $('.nextBtn').click(function (e) {
         if (currentTab < 3) {
           $('.modifications > .item').hide();
           currentTab++;
           $(`#modification${currentTab} > .item`).show();
         }
       });
+
+      $('.prevBtn').click(function (e) {
+        if(currentTab > 1){
+          $('.modifications > .item').hide();
+          currentTab--;
+          $(`#modification${currentTab} > .item`).show();
+        }
+      })
+      
     }
 
     let radius = 270;

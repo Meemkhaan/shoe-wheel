@@ -2,11 +2,11 @@
   <div class="row justify-content-center">
     <div class="col-md-9">
       <div style="margin-top: 15px; padding: 55px 40px 250px 40px">
-        <form >
-          <div id="container" >
+        <form>
+          <div id="container">
             <!--! ALL SUB OPTIONS OF TOPCOVERS -->
             <!--VINYL OPTIONS -->
-            <div id="vinyl" >
+            <div id="vinyl">
               <a class="item" *ngFor="let options of tc_vinyl_options">
                 <div class="form-check">
                   <input
@@ -17,7 +17,7 @@
                     (change)="onItemChange($event.target.value)"
                     [checked]="tc_vinyl == options.value"
                   />
-                  <label class="form-check-label"> {{options.value}} </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
@@ -33,7 +33,7 @@
                     (change)="onItemChange1($event.target.value)"
                     [checked]="tc_sports == options.value"
                   />
-                  <label class="form-check-label"> {{options.value}} </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
@@ -49,7 +49,7 @@
                     (change)="onItemChange2($event.target.value)"
                     [checked]="tc_microcell == options.value"
                   />
-                  <label class="form-check-label"> {{options.value}} </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
@@ -65,7 +65,7 @@
                     (change)="onItemChange3($event.target.value)"
                     [checked]="tc_leather == options.value"
                   />
-                  <label class="form-check-label"> {{options.value}}  </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
@@ -81,7 +81,7 @@
                     (change)="onItemChange4($event.target.value)"
                     [checked]="tc_evaperferated == options.value"
                   />
-                  <label class="form-check-label"> {{options.value}} </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
@@ -112,11 +112,11 @@
                     [checked]="tc_suedo == options.value"
                     (change)="onItemChange6($event.target.value)"
                   />
-                  <label class="form-check-label"> {{options.value}} </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </a>
             </div>
-  
+
             <!--! ALL SUB OPTIONS OF Underlay -->
             <div id="mi-vinyl">
               <a class="item">
@@ -140,7 +140,7 @@
                 </div>
               </a>
             </div>
-  
+
             <div id="mi-suede">
               <a class="item">
                 <div class="form-check">
@@ -173,7 +173,7 @@
                 </div>
               </a>
             </div>
-  
+
             <div id="mi-microcell">
               <a class="item">
                 <div class="form-check">
@@ -216,28 +216,224 @@
                 </div>
               </a>
             </div>
-  
             <!--! Types of Shell and Cushion -->
-  
             <div id="sheel-types-cushion">
               <a class="item" routerLink="deep-heel-cup">
-                  <h6> Deep Heel Cup </h6>
+                <h6>Deep Heel Cup</h6>
               </a>
-  
-              <a class="item"  routerLink="length">
-                <h6> Length </h6>
+
+              <a class="item" routerLink="length">
+                <h6>Length</h6>
               </a>
-  
-              <a class="item"  routerLink="cusion">
-                <h6> Cusion </h6>
+
+              <a class="item" routerLink="cusion">
+                <h6>Cusion</h6>
               </a>
-  
-              <a class="item"  routerLink="types-of-sheel">
-                <h6> Types Of Shell </h6>
+
+              <a class="item" routerLink="types-of-sheel">
+                <h6>Types Of Shell</h6>
+              </a>
+            </div>
+            <!--! Modifications -->
+            <div id="heel-spur-pad">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="heel_spur_pad_right"
+                    (input)="heel_spur_pad_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="heel_spur_pad_left"
+                    (input)="heel_spur_pad_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
               </a>
             </div>
 
-            <!--  -->
+            <div id="heel-cusion">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="heel_spur_pad_left"
+                    (input)="heel_cusion_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="heel_cusion_right"
+                    (input)="heel_cusion_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="met-pad">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="met_pad_left"
+                    (input)="met_pad_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="met_pad_right"
+                    (input)="met_pad_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="bet-bar-pad">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="bet_bar_pad_left"
+                    (input)="bet_bar_pad_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="bet_bar_pad_right"
+                    (input)="bet_bar_pad_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="letral-clip">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="letral_clip_left"
+                    (input)="letral_clip_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="letral_clip_right"
+                    (input)="letral_clip_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="toe-crest">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="toe_crest_left"
+                    (input)="toe_crest_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="toe_crest_right"
+                    (input)="toe_crest_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="cubiod-pad">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="cubiod_pad_left"
+                    (input)="cubiod_pad_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="cubiod_pad_right"
+                    (input)="cubiod_pad_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="high-medial-flang">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="high_medial_flang_left"
+                    (input)="high_medial_flang_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    name="high_medial_flang_right"
+                    (input)="high_medial_flang_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
           </div>
         </form>
       </div>

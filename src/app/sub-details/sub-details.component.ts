@@ -56,7 +56,12 @@ export class SubDetailsComponent implements OnInit {
   reverse_morton_extension_left: any;
   morton_extension_right: any;
   morton_extension_left: any;
-
+  u_cut_out_right: any;
+  u_cut_out_left: any;
+  extrensic_fore_foot_position_right: any;
+  extrensic_fore_foot_position_left: any;
+  extrensic_rare_foot_position_right: any;
+  extrensic_rare_foot_position_left: any;
 
   constructor(private FormBuilder: FormBuilder) {}
   ngOnInit() {
@@ -80,23 +85,50 @@ export class SubDetailsComponent implements OnInit {
     this.letral_clip_left = localStorage.getItem('letral_clip_left');
     this.toe_crest_right = localStorage.getItem('toe_crest_right');
     this.toe_crest_left = localStorage.getItem('toe_crest_left');
-    this.high_medial_flang_right = localStorage.getItem('high_medial_flang_right');
-    this.high_medial_flang_left = localStorage.getItem('high_medial_flang_left');
+    this.high_medial_flang_right = localStorage.getItem(
+      'high_medial_flang_right'
+    );
+    this.high_medial_flang_left = localStorage.getItem(
+      'high_medial_flang_left'
+    );
     this.heel_lift_right = localStorage.getItem('heel_lift_right');
     this.heel_lift_left = localStorage.getItem('heel_lift_left');
     this.reinforced_arch_right = localStorage.getItem('reinforced_arch_right');
     this.reinforced_arch_left = localStorage.getItem('reinforced_arch_left');
-    this.rear_foot_posting_right = localStorage.getItem('rear_foot_posting_right');
-    this.rear_foot_posting_left = localStorage.getItem('rear_foot_posting_left');
+    this.rear_foot_posting_right = localStorage.getItem(
+      'rear_foot_posting_right'
+    );
+    this.rear_foot_posting_left = localStorage.getItem(
+      'rear_foot_posting_left'
+    );
     this.navicular_pac_right = localStorage.getItem('navicular_pac_right');
     this.navicular_pac_left = localStorage.getItem('navicular_pac_left');
     this.scaphoid_pad_right = localStorage.getItem('scaphoid_pad_right');
     this.scaphoid_pad_left = localStorage.getItem('scaphoid_pad_left');
-    this.reverse_morton_extension_right = localStorage.getItem('reverse_morton_extension_right');
-    this.reverse_morton_extension_left = localStorage.getItem('reverse_morton_extension_left');
-    this.morton_extension_right = localStorage.getItem('morton_extension_right');
+    this.reverse_morton_extension_right = localStorage.getItem(
+      'reverse_morton_extension_right'
+    );
+    this.reverse_morton_extension_left = localStorage.getItem(
+      'reverse_morton_extension_left'
+    );
+    this.morton_extension_right = localStorage.getItem(
+      'morton_extension_right'
+    );
     this.morton_extension_left = localStorage.getItem('morton_extension_left');
-
+    this.u_cut_out_right = localStorage.getItem('u_cut_out_right');
+    this.u_cut_out_left = localStorage.getItem('u_cut_out_left');
+    this.extrensic_fore_foot_position_right = localStorage.getItem(
+      'extrensic_fore_foot_position_right'
+    );
+    this.extrensic_fore_foot_position_left = localStorage.getItem(
+      'extrensic_fore_foot_position_left'
+    );
+    this.extrensic_rare_foot_position_right = localStorage.getItem(
+      'extrensic_rare_foot_position_right'
+    );
+    this.extrensic_rare_foot_position_left = localStorage.getItem(
+      'extrensic_rare_foot_position_left'
+    );
 
     $(function () {
       $('.item').hide();
@@ -161,10 +193,12 @@ export class SubDetailsComponent implements OnInit {
         $('#reverse-morton-extension > .item').show();
       } else if (activatedRoute.match('mortons-extension')) {
         $('#mortons-extension > .item').show();
-      } else if (activatedRoute.match('')) {
-      } else if (activatedRoute.match('')) {
-      } else if (activatedRoute.match('')) {
-      } else if (activatedRoute.match('')) {
+      } else if (activatedRoute.match('u-cut-out')) {
+        $('#u-cut-out > .item').show();
+      } else if (activatedRoute.match('extrensic-fore-foot-position')) {
+        $('#extrensic-fore-foot-position > .item').show();
+      } else if (activatedRoute.match('extrensic-rare-foot-position')) {
+        $('#extrensic-rare-foot-position > .item').show();
       }
 
       let radius = 270;
@@ -342,7 +376,7 @@ export class SubDetailsComponent implements OnInit {
   reverse_morton_extension_left_change(value: any) {
     this.test(value, 'reverse_morton_extension_left');
   }
-  
+
   morton_extension_right_change(value: any) {
     this.test(value, 'morton_extension_right');
   }
@@ -350,7 +384,28 @@ export class SubDetailsComponent implements OnInit {
   morton_extension_left_change(value: any) {
     this.test(value, 'morton_extension_left');
   }
+  u_cut_out_right_change(value: any) {
+    this.test(value, 'u_cut_out_right');
+  }
 
+  u_cut_out_left_change(value: any) {
+    this.test(value, 'u_cut_out_left');
+  }
+  extrensic_fore_foot_position_right_change(value: any) {
+    this.test(value, 'extrensic_fore_foot_position_right');
+  }
+
+  extrensic_fore_foot_position_left_change(value: any) {
+    this.test(value, 'extrensic_fore_foot_position_left');
+  }
+  
+  extrensic_rare_foot_position_right_change(value: any) {
+    this.test(value, 'extrensic_rare_foot_position_right');
+  }
+
+  extrensic_rare_foot_position_left_change(value: any) {
+    this.test(value, 'extrensic_rare_foot_position_left');
+  }
 
 
   //

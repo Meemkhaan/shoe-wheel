@@ -428,7 +428,9 @@
                     class="input-sm"
                     type="number"
                     [value]="high_medial_flang_right"
-                    (input)="high_medial_flang_right_change($event.target.value)"
+                    (input)="
+                      high_medial_flang_right_change($event.target.value)
+                    "
                   />
                   <label class="form-check-label"> Right </label>
                 </div>
@@ -460,157 +462,252 @@
               </a>
             </div>
 
-              <div id="reinforced-arch">
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="reinforced_arch_left"
-                      (input)="reinforced_arch_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="reinforced_arch_right"
-                      (input)="reinforced_arch_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-              </div>
+            <div id="reinforced-arch">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="reinforced_arch_left"
+                    (input)="reinforced_arch_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="reinforced_arch_right"
+                    (input)="reinforced_arch_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
 
-              <div id="rear-foot-posting">
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="rear_foot_posting_left"
-                      (input)="rear_foot_posting_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="rear_foot_posting_right"
-                      (input)="rear_foot_posting_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-              </div>
-              
-              <div id="navicular-pac">
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="navicular_pac_left"
-                      (input)="navicular_pac_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="navicular_pac_right"
-                      (input)="navicular_pac_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-              </div>
+            <div id="rear-foot-posting">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="rear_foot_posting_left"
+                    (input)="rear_foot_posting_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="rear_foot_posting_right"
+                    (input)="
+                      rear_foot_posting_right_change($event.target.value)
+                    "
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
 
-              <div id="scaphoid-pad">
-                <a class="item">
-                  <div class="form-check">
-                    <input
+            <div id="navicular-pac">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="navicular_pac_left"
+                    (input)="navicular_pac_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="navicular_pac_right"
+                    (input)="navicular_pac_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="scaphoid-pad">
+              <a class="item">
+                <div class="form-check">
+                  <input
                     class="input-sm"
                     type="number"
                     [value]="scaphoid_pad_right"
                     (input)="scaphoid_pad_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="scaphoid_pad_left"
-                      (input)="scaphoid_pad_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-              </div>
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="scaphoid_pad_left"
+                    (input)="scaphoid_pad_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
 
-              <div id="reverse-morton-extension">
-                <a class="item">
-                  <div class="form-check">
-                    <input
+            <div id="reverse-morton-extension">
+              <a class="item">
+                <div class="form-check">
+                  <input
                     class="input-sm"
                     type="number"
                     [value]="reverse_morton_extension_right"
-                    (input)="reverse_morton_extension_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="reverse_morton_extension_left"
-                      (input)="reverse_morton_extension_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-              </div>
+                    (input)="
+                      reverse_morton_extension_right_change($event.target.value)
+                    "
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="reverse_morton_extension_left"
+                    (input)="
+                      reverse_morton_extension_left_change($event.target.value)
+                    "
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
 
-              <div id="mortons-extension">
-                <a class="item">
-                  <div class="form-check">
-                    <input
+            <div id="mortons-extension">
+              <a class="item">
+                <div class="form-check">
+                  <input
                     class="input-sm"
                     type="number"
                     [value]="morton_extension_right"
                     (input)="morton_extension_right_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Right </label>
-                  </div>
-                </a>
-                <a class="item">
-                  <div class="form-check">
-                    <input
-                      class="input-sm"
-                      type="number"
-                      [value]="morton_extension_left"
-                      (input)="morton_extension_left_change($event.target.value)"
-                    />
-                    <label class="form-check-label"> Left </label>
-                  </div>
-                </a>
-              </div>
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="morton_extension_left"
+                    (input)="morton_extension_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
 
+            <div id="u-cut-out">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="u_cut_out_right"
+                    (input)="u_cut_out_right_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="u_cut_out_left"
+                    (input)="u_cut_out_left_change($event.target.value)"
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
 
+            <div id="extrensic-fore-foot-position">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="extrensic_fore_foot_position_right"
+                    (input)="
+                      extrensic_fore_foot_position_right_change(
+                        $event.target.value
+                      )
+                    "
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="extrensic_fore_foot_position_left"
+                    (input)="
+                      extrensic_fore_foot_position_left_change(
+                        $event.target.value
+                      )
+                    "
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
+
+            <div id="extrensic-rare-foot-position">
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="extrensic_rare_foot_position_right"
+                    (input)="
+                      extrensic_rare_foot_position_right_change(
+                        $event.target.value
+                      )
+                    "
+                  />
+                  <label class="form-check-label"> Right </label>
+                </div>
+              </a>
+              <a class="item">
+                <div class="form-check">
+                  <input
+                    class="input-sm"
+                    type="number"
+                    [value]="extrensic_rare_foot_position_left"
+                    (input)="
+                      extrensic_rare_foot_position_left_change(
+                        $event.target.value
+                      )
+                    "
+                  />
+                  <label class="form-check-label"> Left </label>
+                </div>
+              </a>
+            </div>
           </div>
         </form>
       </div>

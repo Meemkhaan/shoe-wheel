@@ -15,8 +15,6 @@ body{
   }
 }
 
-
-
 #container {
   width: 550px;
   height: 550px;
@@ -38,7 +36,6 @@ body{
   box-shadow: 0 12px 24px 0 rgb(13 13 13 / 6%);
   animation: spin 25s  linear infinite reverse;
   text-decoration: none;
-  /* border: 1px solid rgba(0, 0, 0, 0.041); */
   border: 1px dashed #fff;
   transition: all 0.5s;
   /* To get items in center */
@@ -62,8 +59,8 @@ body{
 #container:hover {
   animation-duration: 99s;
 }   */
-
-  /* @keyframes spin {
+/* 
+  @keyframes spin {
     100% {
       transform: rotate(1turn);
     }

@@ -62,7 +62,7 @@ export class SubDetailsComponent implements OnInit {
   extrensic_fore_foot_position_left: any;
   extrensic_rare_foot_position_right: any;
   extrensic_rare_foot_position_left: any;
-
+  // middlelayer
   constructor(private FormBuilder: FormBuilder) {}
   ngOnInit() {
     this.tc_vinyl = localStorage.getItem('tc_vinyl_options');
@@ -200,6 +200,10 @@ export class SubDetailsComponent implements OnInit {
       } else if (activatedRoute.match('extrensic-rare-foot-position')) {
         $('#extrensic-rare-foot-position > .item').show();
       }
+      // Sheel Modifications
+      if (activatedRoute.match('sheel-modifications')) {
+        $('#sheel-modifications > .item').show();
+      }
 
       let radius = 270;
       let fields = $('.item'),
@@ -270,19 +274,24 @@ export class SubDetailsComponent implements OnInit {
       ? localStorage.setItem(`${options}`, value)
       : localStorage.removeItem(`${options}`);
   }
+  test2(value: any, options: any) {
+    value == true
+      ? localStorage.setItem(`${options}`, value)
+      : localStorage.removeItem(`${options}`);
+  }
   heel_spur_pad_left_change(value: any) {
-    this.test(value, 'heel_spur_pad_left');
+    this.test2(value.target.checked, 'heel_spur_pad_left');
   }
   heel_spur_pad_right_change(value: any) {
-    this.test(value, 'heel_spur_pad_right');
+    this.test2(value.target.checked, 'heel_spur_pad_right');
   }
 
   heel_cusion_right_change(value: any) {
-    this.test(value, 'heel_cusion_right');
+    this.test2(value.target.checked, 'heel_cusion_right');
   }
 
   heel_cusion_left_change(value: any) {
-    this.test(value, 'heel_cusion_left');
+    this.test2(value.target.checked, 'heel_cusion_left');
   }
 
   met_pad_right_change(value: any) {
@@ -301,95 +310,95 @@ export class SubDetailsComponent implements OnInit {
   }
 
   letral_clip_right_change(value: any) {
-    this.test(value, 'letral_clip_right');
+    this.test2(value.target.checked, 'letral_clip_right');
   }
 
   letral_clip_left_change(value: any) {
-    this.test(value, 'letral_clip_left');
+    this.test2(value.target.checked, 'letral_clip_left');
   }
 
   toe_crest_right_change(value: any) {
-    this.test(value, 'toe_crest_right');
+    this.test2(value.target.checked, 'toe_crest_right');
   }
 
   toe_crest_left_change(value: any) {
-    this.test(value, 'toe_crest_left');
+    this.test2(value.target.checked, 'toe_crest_left');
   }
 
   cubiod_pad_right_change(value: any) {
-    this.test(value, 'cubiod_pad_right');
+    this.test2(value.target.checked, 'cubiod_pad_right');
   }
 
   cubiod_pad_left_change(value: any) {
-    this.test(value, 'cubiod_pad_left');
+    this.test2(value.target.checked, 'cubiod_pad_left');
   }
 
   high_medial_flang_right_change(value: any) {
-    this.test(value, 'high_medial_flang_right');
+    this.test2(value.target.checked, 'high_medial_flang_right');
   }
 
   high_medial_flang_left_change(value: any) {
-    this.test(value, 'high_medial_flang_left');
+    this.test2(value.target.checked, 'high_medial_flang_left');
   }
 
   heel_lift_right_change(value: any) {
-    this.test(value, 'heel_lift_right');
+     this.test(value, 'heel_lift_right');
   }
 
   heel_lift_left_change(value: any) {
-    this.test(value, 'heel_lift_left');
+     this.test(value, 'heel_lift_left');
   }
   reinforced_arch_right_change(value: any) {
-    this.test(value, 'reinforced_arch_right');
+    this.test2(value.target.checked, 'reinforced_arch_right');
   }
 
   reinforced_arch_left_change(value: any) {
-    this.test(value, 'reinforced_arch_left');
+    this.test2(value.target.checked, 'reinforced_arch_left');
   }
   rear_foot_posting_right_change(value: any) {
-    this.test(value, 'rear_foot_posting_right');
+    this.test2(value.target.checked, 'rear_foot_posting_right');
   }
 
   rear_foot_posting_left_change(value: any) {
-    this.test(value, 'rear_foot_posting_left');
+    this.test2(value.target.checked, 'rear_foot_posting_left');
   }
 
   navicular_pac_right_change(value: any) {
-    this.test(value, 'navicular_pac_right');
+    this.test2(value.target.checked, 'navicular_pac_right');
   }
 
   navicular_pac_left_change(value: any) {
-    this.test(value, 'navicular_pac_left');
+    this.test2(value.target.checked, 'navicular_pac_left');
   }
 
   scaphoid_pad_right_change(value: any) {
-    this.test(value, 'scaphoid_pad_right');
+    this.test2(value.target.checked, 'scaphoid_pad_right');
   }
 
   scaphoid_pad_left_change(value: any) {
-    this.test(value, 'scaphoid_pad_left');
+    this.test2(value.target.checked, 'scaphoid_pad_left');
   }
-  reverse_morton_extension_right_change(value: any) {
-    this.test(value, 'reverse_morton_extension');
+    reverse_morton_extension_right_change(value: any) {
+    this.test2(value.target.checked, 'reverse_morton_extension');
   }
 
   reverse_morton_extension_left_change(value: any) {
-    this.test(value, 'reverse_morton_extension_left');
+    this.test2(value.target.checked, 'reverse_morton_extension_left');
   }
 
   morton_extension_right_change(value: any) {
-    this.test(value, 'morton_extension_right');
+    this.test2(value.target.checked, 'morton_extension_right');
   }
 
   morton_extension_left_change(value: any) {
-    this.test(value, 'morton_extension_left');
+    this.test2(value.target.checked, 'morton_extension_left');
   }
   u_cut_out_right_change(value: any) {
-    this.test(value, 'u_cut_out_right');
+    this.test2(value.target.checked, 'u_cut_out_right');
   }
 
   u_cut_out_left_change(value: any) {
-    this.test(value, 'u_cut_out_left');
+    this.test2(value.target.checked, 'u_cut_out_left');
   }
   extrensic_fore_foot_position_right_change(value: any) {
     this.test(value, 'extrensic_fore_foot_position_right');
@@ -398,7 +407,7 @@ export class SubDetailsComponent implements OnInit {
   extrensic_fore_foot_position_left_change(value: any) {
     this.test(value, 'extrensic_fore_foot_position_left');
   }
-  
+
   extrensic_rare_foot_position_right_change(value: any) {
     this.test(value, 'extrensic_rare_foot_position_right');
   }
@@ -406,7 +415,6 @@ export class SubDetailsComponent implements OnInit {
   extrensic_rare_foot_position_left_change(value: any) {
     this.test(value, 'extrensic_rare_foot_position_left');
   }
-
 
   //
   tc_vinyl_options = [

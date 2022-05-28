@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FourthLayerOptionsComponent implements OnInit {
   constructor() {}
-
   ngOnInit() {
+    
     $(function () {
       $('.item').hide();
       let activatedRoute = window.location.pathname;

@@ -1,85 +1,70 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-9">
-      <div
-        class=""
-        style="margin-top: 15px; padding: 55px 40px 250px 40px"
-      >
-        <div id="container" >
+      <div class="" style="margin-top: 15px; padding: 55px 40px 250px 40px">
+        <div id="container">
           <!--! DEEP HEEL CUP OPTIONS -->
           <div id="deep-heel">
-            <label class="item" >
+            <label class="item" *ngFor="let options of deep_heel_cup_options">
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
+                  [value]="options.value"
+                  [checked]="deep_heel_cup == options.value"
+                  (change)="deep_heel_cup_change($event.target.value)"
                 />
-                <label class="form-check-label"> 10mm </label>
-              </div>
-            </label>
-
-            <label class="item" >
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> 12mm </label>
-              </div>
-            </label>
-
-            <label class="item" >
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> 15mm </label>
-              </div>
-            </label>
-
-            <label class="item" >
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <label class="form-check-label"> Other </label>
+                <label class="form-check-label"> {{ options.value }} </label>
               </div>
             </label>
           </div>
           <!--! length OPTIONS -->
           <div id="length">
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Full Length"
+                  (change)="tcsc_full_length($event,'Full Length')"
+                  [checked]="tcsc_ful_length"
+                />
                 <label class="form-check-label" for="flexCheckDefault">
                   Full Length
                 </label>
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Sulcus"
+                  (change)="tcsc_full_length($event,'Sulcus')"
+                  [checked]="tcsc_Sclus"
+                />
                 <label class="form-check-label"> Sulcus</label>
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="3/4 lo meters"
+                  (change)="tcsc_full_length($event,'3/4 lo meters')"
+                  [checked]="lo_meters_length"
+                />
                 <label class="form-check-label"> 3/4 lo meters</label>
               </div>
             </label>
           </div>
           <!--! cusion OPTIONS -->
           <div id="cusion">
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -88,21 +73,21 @@
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label"> 2mm</label>
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label"> 3mm</label>
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label"> Other</label>
@@ -111,7 +96,7 @@
           </div>
           <!--! Types Of Shell OPTIONS -->
           <div id="sheel-types">
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -120,7 +105,7 @@
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -129,7 +114,7 @@
               </div>
             </label>
 
-            <label class="item" >
+            <label class="item">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -138,6 +123,7 @@
               </div>
             </label>
           </div>
+
         </div>
       </div>
     </div>

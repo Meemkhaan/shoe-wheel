@@ -5,13 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+
 @Component({
   selector: 'app-sub-details',
   templateUrl: './sub-details.component.html',
@@ -62,8 +56,11 @@ export class SubDetailsComponent implements OnInit {
   extrensic_fore_foot_position_left: any;
   extrensic_rare_foot_position_right: any;
   extrensic_rare_foot_position_left: any;
-  // middlelayer
-  constructor(private FormBuilder: FormBuilder) {}
+  // MIDDLE LAYER 
+  mi_suede: any;
+  mi_vinyl: any;
+  mi_microcell: any;
+  constructor() {}
   ngOnInit() {
     this.tc_vinyl = localStorage.getItem('tc_vinyl_options');
     this.tc_sports = localStorage.getItem('tc_sports_options');
@@ -129,6 +126,10 @@ export class SubDetailsComponent implements OnInit {
     this.extrensic_rare_foot_position_left = localStorage.getItem(
       'extrensic_rare_foot_position_left'
     );
+    // MIDDLE LAYER 
+    this.mi_suede = localStorage.getItem('mi_suede_options');
+    this.mi_vinyl = localStorage.getItem('mi_vinyl_options');
+    this.mi_microcell = localStorage.getItem('mi_microcell_options');
 
     $(function () {
       $('.item').hide();
@@ -342,11 +343,11 @@ export class SubDetailsComponent implements OnInit {
   }
 
   heel_lift_right_change(value: any) {
-     this.test(value, 'heel_lift_right');
+    this.test(value, 'heel_lift_right');
   }
 
   heel_lift_left_change(value: any) {
-     this.test(value, 'heel_lift_left');
+    this.test(value, 'heel_lift_left');
   }
   reinforced_arch_right_change(value: any) {
     this.test2(value.target.checked, 'reinforced_arch_right');
@@ -378,7 +379,7 @@ export class SubDetailsComponent implements OnInit {
   scaphoid_pad_left_change(value: any) {
     this.test2(value.target.checked, 'scaphoid_pad_left');
   }
-    reverse_morton_extension_right_change(value: any) {
+  reverse_morton_extension_right_change(value: any) {
     this.test2(value.target.checked, 'reverse_morton_extension');
   }
 
@@ -416,6 +417,22 @@ export class SubDetailsComponent implements OnInit {
     this.test(value, 'extrensic_rare_foot_position_left');
   }
 
+  // MIDDLE LAYER 
+  onItemChangemicrocell(value: any) {
+    this.mi_microcell = value;
+    localStorage.setItem('mi_microcell_options', this.mi_microcell);
+  }
+  onItemChangesuede(value: any) {
+    this.mi_suede = value;
+    localStorage.setItem('mi_suede_options', this.mi_suede);
+  }
+  onItemChangevinyl(value: any) {
+    this.mi_vinyl = value;
+    localStorage.setItem('mi_vinyl_options', this.mi_vinyl);
+  }
+
+
+
   //
   tc_vinyl_options = [
     { id: 1, value: 'Black' },
@@ -424,7 +441,6 @@ export class SubDetailsComponent implements OnInit {
     { id: 4, value: 'Red' },
     { id: 5, value: 'Grey' },
   ];
-
   tc_sports_options = [
     { id: 1, value: 'Black' },
     { id: 2, value: 'Navy' },
@@ -457,5 +473,21 @@ export class SubDetailsComponent implements OnInit {
     { id: 1, value: 'Black' },
     { id: 2, value: 'Tan' },
     { id: 3, value: 'Brown' },
+  ];
+  // middlelayer
+  mi_microcell_options = [
+    { id: 1, value: 'Black' },
+    { id: 2, value: 'Green' },
+    { id: 3, value: 'Red' },
+    { id: 4, value: 'Navy' },
+  ];
+  mi_suede_options = [
+    { id: 1, value: 'Black' },
+    { id: 2, value: 'Tan' },
+    { id: 3, value: 'Brown' },
+  ];
+  mi_vinyl_options = [
+    { id: 1, value: 'Black' },
+    { id: 2, value: 'Navy' },
   ];
 }

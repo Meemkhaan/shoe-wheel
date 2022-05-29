@@ -122,102 +122,49 @@
 
             <!--! ALL SUB OPTIONS OF Underlay -->
             <div id="mi-vinyl">
-              <label class="item">
+              <label class="item" *ngFor="let options of mi_vinyl_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="mivinylopts"
+                    [value]="options.value"
+                    (change)="onItemChangevinyl($event.target.value)"
                   />
-                  <label class="form-check-label"> Black </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </label>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="mivinylopts"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
+         
             </div>
 
             <div id="mi-suede">
-              <label class="item">
+              <label class="item" *ngFor="let options of mi_suede_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
                     name="misuedeopts"
+                    [value]="options.value"
+                    (change)="onItemChangesuede($event.target.value)"
                   />
-                  <label class="form-check-label"> Black </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </label>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="misuedeopts"
-                  />
-                  <label class="form-check-label"> Tan </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="misuedeopts"
-                  />
-                  <label class="form-check-label"> Brown </label>
-                </div>
-              </a>
             </div>
 
             <div id="mi-microcell">
-              <label class="item">
+              <label class="item" *ngFor="let options of mi_microcell_options">
                 <div class="form-check">
                   <input
                     class="form-check-input"
                     type="radio"
-                    name="mimicrocellopts"
+                    name="mimicrocell"
+                    [value]="options.value"
+                    (change)="onItemChangemicrocell($event.target.value)"
                   />
-                  <label class="form-check-label"> Black </label>
+                  <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </label>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="mimicrocellopts"
-                  />
-                  <label class="form-check-label"> Green </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="mimicrocellopts"
-                  />
-                  <label class="form-check-label"> Red </label>
-                </div>
-              </a>
-              <a class="item">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="mimicrocellopts"
-                  />
-                  <label class="form-check-label"> Navy </label>
-                </div>
-              </a>
             </div>
             <!--! Types of Shell and Cushion -->
             <div id="sheel-types-cushion">

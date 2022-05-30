@@ -117,6 +117,7 @@
             </label>
           </div>
           <!--! Types Of Shell OPTIONS -->
+
           <div id="sheel-types">
             <label class="item">
               <div class="form-check">
@@ -161,6 +162,69 @@
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   3 mm
+                </label>
+              </div>
+            </label>
+          </div>
+          <!--!  Shell Modification -->
+          <div id="first-meet-cut-out">
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Left"
+                  (change)="first_meet_cut_out_left_change($event)"
+                  [checked]="first_meet_cut_out_right"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Left
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Right"
+                  (change)="first_meet_cut_out_right_change($event)"
+                  [checked]="first_meet_cut_out_right"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Right
+                </label>
+              </div>
+            </label>
+          </div>
+          <div id="first-ray-cut-out">
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Left"
+                  (change)="first_ray_cut_out_left_change($event)"
+                  [checked]="first_ray_cut_out_left"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Left
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Right"
+                  (change)="first_ray_cut_out_right_change($event)"
+                  [checked]="first_ray_cut_out_right"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Right
                 </label>
               </div>
             </label>

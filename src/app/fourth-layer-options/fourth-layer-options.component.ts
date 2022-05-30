@@ -22,8 +22,13 @@ export class FourthLayerOptionsComponent implements OnInit {
   sheel_type_semi_rigid: any;
   sheel_type_3_mm: any;
   //
-
   deep_heel_cup: any;
+  //
+  first_meet_cut_out_left:any; 
+  first_meet_cut_out_right:any; 
+  //
+  first_ray_cut_out_left:any; 
+  first_ray_cut_out_right:any; 
 
   constructor() {}
   ngOnInit() {
@@ -39,6 +44,7 @@ export class FourthLayerOptionsComponent implements OnInit {
       } else if (activatedRoute.match('types-of-sheel')) {
         $('#sheel-types > .item').show();
       } else if(activatedRoute.match('first-meet-cut-out')){
+        $('#first-meet-cut-out > .item').show();
         
       }
 
@@ -99,6 +105,8 @@ export class FourthLayerOptionsComponent implements OnInit {
 
     //
     this.deep_heel_cup = localStorage.getItem('deep_heel_cup');
+    this.first_meet_cut_out_left = localStorage.getItem('first_meet_cut_out_left');
+    this.first_meet_cut_out_right = localStorage.getItem('first_meet_cut_out_right');
   }
 
   //
@@ -178,9 +186,33 @@ export class FourthLayerOptionsComponent implements OnInit {
     localStorage.setItem('tcsc_cusion', JSON.stringify(this.tcsc_cusion));
   }
 
+
+  test2(value: any, options: any) {
+    value == true
+      ? localStorage.setItem(`${options}`, value)
+      : localStorage.removeItem(`${options}`);
+  }
+
   deep_heel_cup_change(value: any) {
     localStorage.setItem('deep_heel_cup', value);
   }
+// 
+  first_meet_cut_out_left_change(value: any){
+    this.test2(value.target.checked, 'first_meet_cut_out_left');
+  }
+  
+  first_meet_cut_out_right_change(value: any){
+    this.test2(value.target.checked, 'first_meet_cut_out_right');
+  }
+  // 
+  first_ray_cut_out_left_change(value: any){
+    this.test2(value.target.checked, 'first_ray_cut_out_left');
+  }
+  
+  first_ray_cut_out_right_change(value: any){
+    this.test2(value.target.checked, 'first_ray_cut_out_right');
+  }
+
 
   //
   deep_heel_cup_options = [

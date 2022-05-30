@@ -68,7 +68,7 @@ export class SubDetailsComponent implements OnInit {
     this.tc_leather = localStorage.getItem('tc_leather_options');
     this.tc_evaperferated = localStorage.getItem('tc_evaperferated_options');
     this.tc_xstatic = localStorage.getItem('tc_xstatic_options');
-    this.tc_suedo = localStorage.getItem('tc_suedo_options');
+    this.tc_suedo = localStorage.getItem('tc_sudeo_options');
     // Modifications
     this.heel_spur_pad_right = localStorage.getItem('heel_spur_pad_right');
     this.heel_spur_pad_left = localStorage.getItem('heel_spur_pad_left');
@@ -395,11 +395,11 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'morton_extension_left');
   }
   u_cut_out_right_change(value: any) {
-    this.test2(value.target.checked, 'u_cut_out_right');
+    this.test(value, 'u_cut_out_right');
   }
 
   u_cut_out_left_change(value: any) {
-    this.test2(value.target.checked, 'u_cut_out_left');
+    this.test(value, 'u_cut_out_left');
   }
   extrensic_fore_foot_position_right_change(value: any) {
     this.test(value, 'extrensic_fore_foot_position_right');

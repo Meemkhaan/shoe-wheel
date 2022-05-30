@@ -98,6 +98,7 @@
                     name="xstaticopts"
                     value="Black"
                     (change)="onItemChange5($event.target.value)"
+                    [checked]="tc_xstatic == 'Black'"
                   />
                   <label class="form-check-label"> Black </label>
                 </div>
@@ -112,8 +113,8 @@
                     type="radio"
                     name="suedoopts"
                     [value]="options.value"
-                    [checked]="tc_suedo == options.value"
                     (change)="onItemChange6($event.target.value)"
+                    [checked]="tc_suedo == options.value"
                   />
                   <label class="form-check-label"> {{ options.value }} </label>
                 </div>
@@ -130,11 +131,11 @@
                     name="mivinylopts"
                     [value]="options.value"
                     (change)="onItemChangevinyl($event.target.value)"
+                    [checked]="mi_vinyl == options.value"
                   />
                   <label class="form-check-label"> {{ options.value }} </label>
                 </div>
               </label>
-         
             </div>
 
             <div id="mi-suede">
@@ -146,6 +147,7 @@
                     name="misuedeopts"
                     [value]="options.value"
                     (change)="onItemChangesuede($event.target.value)"
+                    [checked]="mi_suede == options.value"
                   />
                   <label class="form-check-label"> {{ options.value }} </label>
                 </div>
@@ -161,6 +163,7 @@
                     name="mimicrocell"
                     [value]="options.value"
                     (change)="onItemChangemicrocell($event.target.value)"
+                    [checked]="mi_microcell == options.value"
                   />
                   <label class="form-check-label"> {{ options.value }} </label>
                 </div>
@@ -186,7 +189,7 @@
             </div>
             <!--! Modifications -->
             <div id="heel-spur-pad">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -194,10 +197,10 @@
                     [checked]="heel_spur_pad_right ? true : false"
                     (change)="heel_spur_pad_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
-                </div>
-              </a>
-              <a class="item">
+                  Right
+                </div> </label
+              >/>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -205,13 +208,13 @@
                     [checked]="heel_spur_pad_left ? true : false"
                     (change)="heel_spur_pad_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="heel-cusion">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -219,10 +222,10 @@
                     [checked]="heel_cusion_left ? true : false"
                     (change)="heel_cusion_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -230,13 +233,13 @@
                     [checked]="heel_cusion_right ? true : false"
                     (input)="heel_cusion_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="met-pad">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -244,9 +247,9 @@
                     [value]="met_pad_left"
                     (input)="met_pad_left_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
               <a class="item">
                 <div class="form-check">
                   <input
@@ -261,7 +264,7 @@
             </div>
 
             <div id="bet-bar-pad">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -269,10 +272,10 @@
                     [value]="bet_bar_pad_left"
                     (input)="bet_bar_pad_left_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -280,13 +283,13 @@
                     [value]="bet_bar_pad_right"
                     (input)="bet_bar_pad_right_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="letral-clip">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -294,10 +297,10 @@
                     [checked]="letral_clip_left ? true : false"
                     (change)="letral_clip_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -305,13 +308,13 @@
                     [checked]="letral_clip_right ? true : false"
                     (change)="letral_clip_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="toe-crest">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -319,10 +322,10 @@
                     [checked]="toe_crest_left ? true : false"
                     (change)="toe_crest_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -330,13 +333,13 @@
                     [checked]="toe_crest_right ? true : false"
                     (change)="toe_crest_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="cubiod-pad">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -344,10 +347,10 @@
                     [checked]="cubiod_pad_left ? true : false"
                     (change)="cubiod_pad_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -355,13 +358,13 @@
                     [checked]="cubiod_pad_right ? true : false"
                     (change)="cubiod_pad_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="high-medial-flang">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -369,10 +372,10 @@
                     [checked]="high_medial_flang_left ? true : false"
                     (change)="high_medial_flang_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -380,13 +383,13 @@
                     [checked]="high_medial_flang_right ? true : false"
                     (change)="high_medial_flang_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="heel-lift">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -394,10 +397,10 @@
                     [value]="heel_lift_left"
                     (input)="heel_lift_left_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -405,13 +408,13 @@
                     [value]="heel_lift_right"
                     (input)="heel_lift_right_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="reinforced-arch">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -419,10 +422,10 @@
                     [checked]="reinforced_arch_left ? true : false"
                     (change)="reinforced_arch_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -430,13 +433,13 @@
                     [checked]="reinforced_arch_right ? true : false"
                     (change)="reinforced_arch_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="rear-foot-posting">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -444,10 +447,10 @@
                     [checked]="rear_foot_posting_left ? true : false"
                     (change)="rear_foot_posting_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -455,13 +458,13 @@
                     [checked]="rear_foot_posting_right ? true : false"
                     (change)="rear_foot_posting_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="navicular-pac">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -469,10 +472,10 @@
                     [checked]="navicular_pac_left ? true : false"
                     (change)="navicular_pac_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -480,13 +483,13 @@
                     [checked]="navicular_pac_right ? true : false"
                     (change)="navicular_pac_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="scaphoid-pad">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -494,10 +497,10 @@
                     [checked]="scaphoid_pad_right ? true : false"
                     (change)="scaphoid_pad_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -505,13 +508,13 @@
                     [checked]="scaphoid_pad_left ? true : false"
                     (change)="scaphoid_pad_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="reverse-morton-extension">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -519,10 +522,10 @@
                     [checked]="reverse_morton_extension_right ? true : false"
                     (change)="reverse_morton_extension_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -530,13 +533,13 @@
                     [checked]="reverse_morton_extension_left ? true : false"
                     (change)="reverse_morton_extension_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="mortons-extension">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -544,10 +547,10 @@
                     [checked]="morton_extension_right ? true : false"
                     (change)="morton_extension_right_change($event)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -555,13 +558,13 @@
                     [checked]="morton_extension_left ? true : false"
                     (change)="morton_extension_left_change($event)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="u-cut-out">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -569,10 +572,10 @@
                     [value]="u_cut_out_right"
                     (input)="u_cut_out_right_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -580,13 +583,13 @@
                     [value]="u_cut_out_left"
                     (input)="u_cut_out_left_change($event.target.value)"
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="extrensic-fore-foot-position">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -598,10 +601,10 @@
                       )
                     "
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -613,13 +616,13 @@
                       )
                     "
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
 
             <div id="extrensic-rare-foot-position">
-              <a class="item">
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -631,10 +634,10 @@
                       )
                     "
                   />
-                  <label class="form-check-label"> Right </label>
+                  Right
                 </div>
-              </a>
-              <a class="item">
+              </label>
+              <label class="item text-white">
                 <div class="form-check">
                   <input
                     class="input-sm"
@@ -646,13 +649,13 @@
                       )
                     "
                   />
-                  <label class="form-check-label"> Left </label>
+                  Left
                 </div>
-              </a>
+              </label>
             </div>
             <!--! Sheel Modifications -->
             <div id="sheel-modifications">
-              <a class="item" routerLink="heel-center-pocket">
+              <a class="item text-white" routerLink="heel-center-pocket">
                 <h6>Heel Center Pocket</h6>
               </a>
               <a class="item" routerLink="first-meet-cut-out">

@@ -27,7 +27,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="Full Length"
-                  (change)="tcsc_full_length($event,'Full Length')"
+                  (change)="tcsc_full_length($event, 'Full Length')"
                   [checked]="tcsc_ful_length"
                 />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -42,7 +42,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="Sulcus"
-                  (change)="tcsc_full_length($event,'Sulcus')"
+                  (change)="tcsc_full_length($event, 'Sulcus')"
                   [checked]="tcsc_Sclus"
                 />
                 <label class="form-check-label"> Sulcus</label>
@@ -55,7 +55,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="3/4 lo meters"
-                  (change)="tcsc_full_length($event,'3/4 lo meters')"
+                  (change)="tcsc_full_length($event, '3/4 lo meters')"
                   [checked]="lo_meters_length"
                 />
                 <label class="form-check-label"> 3/4 lo meters</label>
@@ -66,30 +66,52 @@
           <div id="cusion">
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
-                <label class="form-check-label" for="flexCheckDefault">
-                  None
-                </label>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="none"
+                  (change)="tcsc_cusion_change($event, 'none')"
+                  [checked]="tscs_none"
+                />
+                <label class="form-check-label">None</label>
               </div>
             </label>
 
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="2mm"
+                  (change)="tcsc_cusion_change($event, '2mm')"
+                  [checked]="tscs_2mm"
+                />
                 <label class="form-check-label"> 2mm</label>
               </div>
             </label>
 
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="3mm"
+                  (change)="tcsc_cusion_change($event, '3mm')"
+                  [checked]="tscs_3mm"
+                />
                 <label class="form-check-label"> 3mm</label>
               </div>
             </label>
 
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Other"
+                  (change)="tcsc_cusion_change($event, 'other')"
+                  [checked]="tscs_other"
+                />
                 <label class="form-check-label"> Other</label>
               </div>
             </label>
@@ -98,7 +120,15 @@
           <div id="sheel-types">
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Rigid (XT / CF)"
+                  (change)="
+                    tcsc_types_of_sheel_change($event, 'Rigid (XT / CF)')
+                  "
+                  [checked]="sheel_type_rigid"
+                />
                 <label class="form-check-label" for="flexCheckDefault">
                   Rigid (XT / CF)
                 </label>
@@ -107,7 +137,13 @@
 
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Semi Rigid"
+                  (change)="tcsc_types_of_sheel_change($event, 'Semi Rigid')"
+                  [checked]="sheel_type_semi_rigid"
+                />
                 <label class="form-check-label" for="flexCheckDefault">
                   Semi Rigid
                 </label>
@@ -116,14 +152,19 @@
 
             <label class="item">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="3 mm"
+                  (change)="tcsc_types_of_sheel_change($event, '3 mm')"
+                  [checked]="sheel_type_3_mm"
+                />
                 <label class="form-check-label" for="flexCheckDefault">
                   3 mm
                 </label>
               </div>
             </label>
           </div>
-
         </div>
       </div>
     </div>

@@ -229,6 +229,236 @@
               </div>
             </label>
           </div>
+
+          <div id="heel-center-pocket">
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Left"
+                  (change)="heel_center_pocket_left_change($event)"
+                  [checked]="heel_center_pocket_left"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Left
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Right"
+                  (change)="heel_center_pocket_right_change($event)"
+                  [checked]="heel_center_pocket_right"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Right
+                </label>
+              </div>
+            </label>
+          </div>
+
+          <div id="fascia-grove">
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Left"
+                  (change)="fascia_grove_left_change($event)"
+                  [checked]="fascia_grove_left"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Left
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Right"
+                  (change)="fascia_grove_right_change($event)"
+                  [checked]="fascia_grove_right"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Right
+                </label>
+              </div>
+            </label>
+          </div>
+
+          <div id="induced-toeing">
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Left"
+                  (change)="out_toeing_change($event)"
+                  [checked]="out_toeing"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Out-Toeing
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="Right"
+                  (change)="in_toeing_change($event)"
+                  [checked]="in_toeing"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  In-Toeing
+                </label>
+              </div>
+            </label>
+          </div>
+
+          <div id="kirby-skive-lateral">
+            <label class="item text-white">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [checked]="kirbey_skive_lateral_position_right ? true : false"
+                  (change)="kirbey_skive_lateral_position_right_change($event)"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  R - Lateral
+                </label>
+              </div>
+            </label>
+
+            <label class="item text-white">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [checked]="kirbey_skive_lateral_position_left ? true : false"
+                  (change)="kirbey_skive_lateral_position_left_change($event)"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  L - Lateral
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-group">
+                <input
+                  class="input-sm"
+                  type="number"
+                  [value]="kirbey_skive_lateral_position_right_no"
+                  (input)="
+                    kirbey_skive_lateral_position_left_no_change(
+                      $event.target.value
+                    )
+                  "
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  R-Lateral mm
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-group">
+                <input
+                  class="input-sm"
+                  type="number"
+                  [value]="kirbey_skive_lateral_position_left_no"
+                  (input)="
+                    kirbey_skive_lateral_position_right_no_change(
+                      $event.target.value
+                    )
+                  "
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  L-Lateral mm
+                </label>
+              </div>
+            </label>
+          </div>
+
+          <div id="kirby-skive-medial">
+            <label class="item text-white">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [checked]="kirbey_skive_medical_position_right ? true : false"
+                  (change)="kirbey_skive_medical_position_right_change($event)"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  R - Medical
+                </label>
+              </div>
+            </label>
+
+            <label class="item text-white">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [checked]="kirbey_skive_medical_position_left ? true : false"
+                  (change)="kirbey_skive_medical_position_left_change($event)"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  L - Medical
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-group">
+                <input
+                  class="input-sm"
+                  type="number"
+                  [value]="kirbey_skive_medical_position_right_no"
+                  (input)="
+                    kirbey_skive_medical_position_left_no_change(
+                      $event.target.value
+                    )
+                  "
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  R-Medical mm
+                </label>
+              </div>
+            </label>
+
+            <label class="item">
+              <div class="form-group">
+                <input
+                  class="input-sm"
+                  type="number"
+                  [value]="kirbey_skive_medical_position_left_no"
+                  (input)="
+                    kirbey_skive_medical_position_right_no_change(
+                      $event.target.value
+                    )
+                  "
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  L-Medical mm
+                </label>
+              </div>
+            </label>
+          </div>
+
+
         </div>
       </div>
     </div>

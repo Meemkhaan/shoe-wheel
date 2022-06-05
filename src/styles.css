@@ -44,6 +44,7 @@ body{
   align-items: center;
   justify-content: center;
 }
+
 .item h6,
 .item label {
   font-size: 15px;
@@ -55,14 +56,12 @@ body{
   height: 50px;
 }
 
-/* #container:hover > .item,
-#container:hover {
-  animation-duration: 99s;
-}   */
-/* 
+
   @keyframes spin {
     100% {
       transform: rotate(1turn);
     }
-  } */
+  }
+
+  
 

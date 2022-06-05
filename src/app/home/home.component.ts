@@ -9,6 +9,11 @@ export class HomeComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     $(function () {
+
+      if(localStorage.getItem('step') !== null){
+        localStorage.removeItem('step');
+      }
+
       let radius = 270;
       let fields = $('.item'),
         fieldslenght: any = fields.length,

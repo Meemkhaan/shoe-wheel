@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   options: any;
+  currentTab:any;
   class = 'col-md-12';
   constructor(private route: ActivatedRoute) {}
 
@@ -17,28 +18,46 @@ export class DetailsComponent implements OnInit {
       $('#topcovers > .item').show();
     } else if (activatedRoute.match('middlelayer')) {
       $('#middlayer > .item').show();
-    } else if (activatedRoute.match('shell')) { 
+    } else if (activatedRoute.match('shell')) {
       $('#shell > .item').show();
-    } else if (activatedRoute.match('modifications')) {
-      let currentTab = 1;
-      $('#modification1 > .item').show();
-     
+    } 
+    
+    else if (activatedRoute.match('modifications')) {
+      let currentTab:any;
+      if (localStorage.getItem('step') !== null) {
+        currentTab = localStorage.getItem('step');
+         if (localStorage.getItem('step') == '1') {
+          $('#modification1 > .item').show();
+        } else if (localStorage.getItem('step') == '2') {
+          $('#modification2 > .item').show();
+        } else if (localStorage.getItem('step') == '3') {
+          $('#modification3 > .item').show();
+        }
+      } 
+      else {
+        $('#modification1 > .item').show();
+        currentTab = 1;
+      }
       $('.nextBtn').click(function (e) {
         if (currentTab < 3) {
           $('.modifications > .item').hide();
           currentTab++;
+          localStorage.setItem('step', `${currentTab}`);
           $(`#modification${currentTab} > .item`).show();
         }
+        console.log(currentTab, "Next btn");
       });
 
       $('.prevBtn').click(function (e) {
-        if(currentTab > 1){
+        if (currentTab > 1) {
           $('.modifications > .item').hide();
           currentTab--;
+          localStorage.setItem('step', `${currentTab}`);
           $(`#modification${currentTab} > .item`).show();
+          
         }
-      })
-      
+        console.log(currentTab, "prev btn");
+      });
     }
 
     let radius = 270;

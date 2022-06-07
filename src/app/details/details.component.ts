@@ -7,61 +7,72 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   options: any;
-  currentTab:any;
+  currentTab: any;
   class = 'col-md-12';
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    $('.item').hide();
+    $('.item').css({
+      "visibility": "hidden",
+      "transition": "opacity 100ms ease",
+      "opacity:": "0"
+    });
     let activatedRoute = window.location.pathname;
     if (activatedRoute.match('topcovers')) {
-      $('#topcovers > .item').show();
+      $('#topcovers > .item').css('visibility', 'visible');
     } else if (activatedRoute.match('middlelayer')) {
-      $('#middlayer > .item').show();
+      $('#middlayer > .item').css('visibility', 'visible');
     } else if (activatedRoute.match('shell')) {
-      $('#shell > .item').show();
-    } 
-    
-    else if (activatedRoute.match('modifications')) {
-      let currentTab:any;
+      $('#shell > .item').css('visibility', 'visible');
+    } else if (activatedRoute.match('modifications')) {
+      let currentTab: any;
       if (localStorage.getItem('step') !== null) {
         currentTab = localStorage.getItem('step');
-        $('#modification2 > .item').removeClass('item')
-        $('#modification3 > .item').removeClass('item')
-         if (localStorage.getItem('step') == '1') {
-          $('#modification1 > .item').show();
-          $('#modification1 > .item').addClass('item')
+        if (localStorage.getItem('step') == '1') {
+          $('#modification1 > .item').css('visibility', 'visible');
         } else if (localStorage.getItem('step') == '2') {
-          $('#modification2 > .item').show();
-          $('#modification2 > .item').addClass('item')
+          $('#modification2 > .item').css('visibility', 'visible');
         } else if (localStorage.getItem('step') == '3') {
-          $('#modification3 > .item').show();
-          $('#modification3 > .item').addClass('item')
+          $('#modification3 > .item').css('visibility', 'visible');
         }
-      } 
-      else {
-        $('#modification1 > .item').show();
+      } else {
+        $('#modification1 > .item').css('visibility', 'visible');
         currentTab = 1;
       }
       $('.nextBtn').click(function (e) {
         if (currentTab < 3) {
-          $('.modifications > .item').hide();
+          $('.modifications > .item').css({
+            "visibility": "hidden",
+            "transition": "opacity 100ms ease",
+            "opacity:": "0"
+          });
           currentTab++;
           localStorage.setItem('step', `${currentTab}`);
-          $(`#modification${currentTab} > .item`).show();
+          $(`#modification${currentTab} > .item`).css({
+            "visibility": "visible",
+            "transition": "opacity 100ms ease",
+            "opacity:": "1"
+          });
         }
-        console.log(currentTab, "Next btn");
+        console.log(currentTab, 'Next btn');
       });
 
       $('.prevBtn').click(function (e) {
         if (currentTab > 1) {
-          $('.modifications > .item').hide();
+          $('.modifications > .item').css({
+            "visibility": "hidden",
+            "transition": "opacity 100ms ease",
+            "opacity:": "0"
+          })
           currentTab--;
           localStorage.setItem('step', `${currentTab}`);
-          $(`#modification${currentTab} > .item`).show();
-          
+          $(`#modification${currentTab} > .item`).css({
+            "visibility": "visible",
+            "transition": "opacity 100ms ease",
+            "opacity:": "1"
+          })
         }
-        console.log(currentTab, "prev btn");
+        console.log(currentTab, 'prev btn');
       });
     }
 
@@ -73,7 +84,7 @@ export class DetailsComponent implements OnInit {
       height = container.height();
     // checking if item have dsiplay none css property then remove ot from fields length
     let data: any = fields.filter(function () {
-      return $(this).css('display') !== 'none';
+      return $(this).css('visibility') !== 'hidden';
     });
     fieldslenght = data.length;
     let angle = 0,
@@ -92,5 +103,11 @@ export class DetailsComponent implements OnInit {
       });
       angle += step;
     });
+
+
+
+   
+
+
   }
 }

@@ -26,12 +26,17 @@ export class DetailsComponent implements OnInit {
       let currentTab:any;
       if (localStorage.getItem('step') !== null) {
         currentTab = localStorage.getItem('step');
+        $('#modification2 > .item').removeClass('item')
+        $('#modification3 > .item').removeClass('item')
          if (localStorage.getItem('step') == '1') {
           $('#modification1 > .item').show();
+          $('#modification1 > .item').addClass('item')
         } else if (localStorage.getItem('step') == '2') {
           $('#modification2 > .item').show();
+          $('#modification2 > .item').addClass('item')
         } else if (localStorage.getItem('step') == '3') {
           $('#modification3 > .item').show();
+          $('#modification3 > .item').addClass('item')
         }
       } 
       else {

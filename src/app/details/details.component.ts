@@ -41,38 +41,20 @@ export class DetailsComponent implements OnInit {
       }
       $('.nextBtn').click(function (e) {
         if (currentTab < 3) {
-          $('.modifications > .item').css({
-            "visibility": "hidden",
-            "transition": "opacity 100ms ease",
-            "opacity:": "0"
-          });
+          hidefunc('modifications', 'item')
           currentTab++;
           localStorage.setItem('step', `${currentTab}`);
-          $(`#modification${currentTab} > .item`).css({
-            "visibility": "visible",
-            "transition": "opacity 100ms ease",
-            "opacity:": "1"
-          });
+          showfunc(`modification${currentTab}`, 'item')
         }
-        console.log(currentTab, 'Next btn');
       });
 
       $('.prevBtn').click(function (e) {
         if (currentTab > 1) {
-          $('.modifications > .item').css({
-            "visibility": "hidden",
-            "transition": "opacity 100ms ease",
-            "opacity:": "0"
-          })
+          hidefunc('modifications', 'item')
           currentTab--;
           localStorage.setItem('step', `${currentTab}`);
-          $(`#modification${currentTab} > .item`).css({
-            "visibility": "visible",
-            "transition": "opacity 100ms ease",
-            "opacity:": "1"
-          })
+          showfunc(`modification${currentTab}`, 'item')
         }
-        console.log(currentTab, 'prev btn');
       });
     }
 
@@ -104,10 +86,21 @@ export class DetailsComponent implements OnInit {
       angle += step;
     });
 
+    function hidefunc(data:any, data2:any) {
+      $(`.${data} > .${data2}`).css({
+      "visibility": "hidden",
+      "transition": "opacity 100ms ease",
+      "opacity:": "0"
+    })
+    }
 
-
-   
-
-
+    function showfunc(data:any, data2:any) {
+      $(`#${data} > .${data2}`).css({
+      "visibility": "visible",
+      "transition": "opacity 100ms ease",
+      "opacity:": "1"
+    })
+    }
   }
+
 }

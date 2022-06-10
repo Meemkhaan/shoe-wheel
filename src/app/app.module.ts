@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { SubDetailsComponent } from './sub-details/sub-details.component';
 import { FourthLayerOptionsComponent } from './fourth-layer-options/fourth-layer-options.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 
@@ -19,7 +20,8 @@ import { FourthLayerOptionsComponent } from './fourth-layer-options/fourth-layer
     HomeComponent,
     DetailsComponent,
     SubDetailsComponent,
-    FourthLayerOptionsComponent
+    FourthLayerOptionsComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

@@ -25,71 +25,73 @@ export class SubDetailsComponent implements OnInit {
   heel_cusion_right: any;
   heel_cusion_left: any;
   met_pad_left: any;
-  met_pad_right: any;
-  bet_bar_pad_left: any;
-  bet_bar_pad_right: any;
+  met_pad_right_no: any;
+  met_bar_pad_left_no: any;
+  met_bar_pad_right_no: any;
   letral_clip_right: any;
   letral_clip_left: any;
   toe_crest_right: any;
   toe_crest_left: any;
-  cubiod_pad_right: any;
-  cubiod_pad_left: any;
+  cuboid_pad_right: any;
+  cuboid_pad_left: any;
   high_medial_flang_right: any;
   high_medial_flang_left: any;
-  heel_lift_right: any;
-  heel_lift_left: any;
+  heel_lift_right_no: any;
+  heel_lift_left_no: any;
   reinforced_arch_right: any;
   reinforced_arch_left: any;
   rear_foot_posting_right: any;
   rear_foot_posting_left: any;
-  navicular_pac_right: any;
-  navicular_pac_left: any;
+  navicular_pad_right: any;
+  navicular_pad_left: any;
   scaphoid_pad_right: any;
   scaphoid_pad_left: any;
   reverse_morton_extension_right: any;
   reverse_morton_extension_left: any;
   morton_extension_right: any;
   morton_extension_left: any;
-  u_cut_out_right: any;
-  u_cut_out_left: any;
-  extrensic_fore_foot_position_right: any;
-  extrensic_fore_foot_position_left: any;
-  extrensic_rare_foot_position_right: any;
-  extrensic_rare_foot_position_left: any;
+  u_cut_out_right_no: any;
+  u_cut_out_left_no: any;
+  extrensic_fore_foot_position_right_no: any;
+  extrensic_fore_foot_position_left_no: any;
+  extrensic_rare_foot_position_right_no: any;
+  extrensic_rare_foot_position_left_no: any;
   // MIDDLE LAYER 
   mi_suede: any;
   mi_vinyl: any;
   mi_microcell: any;
   constructor() {}
   ngOnInit() {
-    this.tc_vinyl = localStorage.getItem('tc_vinyl_options');
-    this.tc_sports = localStorage.getItem('tc_sports_options');
-    this.tc_microcell = localStorage.getItem('tc_microcell_options');
-    this.tc_leather = localStorage.getItem('tc_leather_options');
-    this.tc_evaperferated = localStorage.getItem('tc_evaperferated_options');
-    this.tc_xstatic = localStorage.getItem('tc_xstatic_options');
-    this.tc_suedo = localStorage.getItem('tc_sudeo_options');
+    this.tc_vinyl = localStorage.getItem('tc_vinyl');
+    this.tc_sports = localStorage.getItem('tc_sports');
+    this.tc_microcell = localStorage.getItem('tc_microcell');
+    this.tc_leather = localStorage.getItem('tc_leather_choices');
+    this.tc_evaperferated = localStorage.getItem('tc_eva_perfeated');
+    this.tc_xstatic = localStorage.getItem('tc_x_static');
+    this.tc_suedo = localStorage.getItem('tc_suedo');
     // Modifications
     this.heel_spur_pad_right = localStorage.getItem('heel_spur_pad_right');
     this.heel_spur_pad_left = localStorage.getItem('heel_spur_pad_left');
     this.heel_cusion_right = localStorage.getItem('heel_cusion_right');
     this.heel_cusion_left = localStorage.getItem('heel_cusion_left');
-    this.met_pad_right = localStorage.getItem('met_pad_right');
+    this.met_pad_right_no = localStorage.getItem('met_pad_right_no');
     this.met_pad_left = localStorage.getItem('met_pad_left');
-    this.bet_bar_pad_right = localStorage.getItem('bet_bar_pad_right');
-    this.bet_bar_pad_left = localStorage.getItem('bet_bar_pad_left');
+    this.met_bar_pad_right_no = localStorage.getItem('met_bar_pad_right_no');
+    this.met_bar_pad_left_no = localStorage.getItem('met_bar_pad_left_no');
     this.letral_clip_right = localStorage.getItem('letral_clip_right');
     this.letral_clip_left = localStorage.getItem('letral_clip_left');
     this.toe_crest_right = localStorage.getItem('toe_crest_right');
     this.toe_crest_left = localStorage.getItem('toe_crest_left');
+    this.cuboid_pad_right = localStorage.getItem('cuboid_pad_right');
+    this.cuboid_pad_left = localStorage.getItem('cuboid_pad_left');
     this.high_medial_flang_right = localStorage.getItem(
       'high_medial_flang_right'
     );
     this.high_medial_flang_left = localStorage.getItem(
       'high_medial_flang_left'
     );
-    this.heel_lift_right = localStorage.getItem('heel_lift_right');
-    this.heel_lift_left = localStorage.getItem('heel_lift_left');
+    this.heel_lift_right_no = localStorage.getItem('heel_lift_right_no');
+    this.heel_lift_left_no = localStorage.getItem('heel_lift_left_no');
     this.reinforced_arch_right = localStorage.getItem('reinforced_arch_right');
     this.reinforced_arch_left = localStorage.getItem('reinforced_arch_left');
     this.rear_foot_posting_right = localStorage.getItem(
@@ -98,8 +100,8 @@ export class SubDetailsComponent implements OnInit {
     this.rear_foot_posting_left = localStorage.getItem(
       'rear_foot_posting_left'
     );
-    this.navicular_pac_right = localStorage.getItem('navicular_pac_right');
-    this.navicular_pac_left = localStorage.getItem('navicular_pac_left');
+    this.navicular_pad_right = localStorage.getItem('navicular_pad_right');
+    this.navicular_pad_left = localStorage.getItem('navicular_pad_left');
     this.scaphoid_pad_right = localStorage.getItem('scaphoid_pad_right');
     this.scaphoid_pad_left = localStorage.getItem('scaphoid_pad_left');
     this.reverse_morton_extension_right = localStorage.getItem(
@@ -112,24 +114,24 @@ export class SubDetailsComponent implements OnInit {
       'morton_extension_right'
     );
     this.morton_extension_left = localStorage.getItem('morton_extension_left');
-    this.u_cut_out_right = localStorage.getItem('u_cut_out_right');
-    this.u_cut_out_left = localStorage.getItem('u_cut_out_left');
-    this.extrensic_fore_foot_position_right = localStorage.getItem(
-      'extrensic_fore_foot_position_right'
+    this.u_cut_out_right_no = localStorage.getItem('u_cut_out_right_no');
+    this.u_cut_out_left_no = localStorage.getItem('u_cut_out_left_no');
+    this.extrensic_fore_foot_position_right_no = localStorage.getItem(
+      'extrensic_fore_foot_position_right_no'
     );
-    this.extrensic_fore_foot_position_left = localStorage.getItem(
-      'extrensic_fore_foot_position_left'
+    this.extrensic_fore_foot_position_left_no = localStorage.getItem(
+      'extrensic_fore_foot_position_left_no'
     );
-    this.extrensic_rare_foot_position_right = localStorage.getItem(
-      'extrensic_rare_foot_position_right'
+    this.extrensic_rare_foot_position_right_no = localStorage.getItem(
+      'extrensic_rare_foot_position_right_no'
     );
-    this.extrensic_rare_foot_position_left = localStorage.getItem(
-      'extrensic_rare_foot_position_left'
+    this.extrensic_rare_foot_position_left_no = localStorage.getItem(
+      'extrensic_rare_foot_position_left_no'
     );
     // MIDDLE LAYER 
-    this.mi_suede = localStorage.getItem('mi_suede_options');
-    this.mi_vinyl = localStorage.getItem('mi_vinyl_options');
-    this.mi_microcell = localStorage.getItem('mi_microcell_options');
+    this.mi_suede = localStorage.getItem('tu_suede');
+    this.mi_vinyl = localStorage.getItem('tu_vinyl');
+    this.mi_microcell = localStorage.getItem('tu_microsell');
 
     $(function () {
       $('.item').hide();
@@ -236,37 +238,37 @@ export class SubDetailsComponent implements OnInit {
 
   onItemChange(value: any) {
     this.tc_vinyl = value;
-    localStorage.setItem('tc_vinyl_options', this.tc_vinyl);
+    localStorage.setItem('tc_vinyl', this.tc_vinyl);
   }
 
   onItemChange1(value: any) {
     this.tc_sports = value;
-    localStorage.setItem('tc_sports_options', this.tc_sports);
+    localStorage.setItem('tc_sports', this.tc_sports);
   }
 
   onItemChange2(value: any) {
     this.tc_microcell = value;
-    localStorage.setItem('tc_microcell_options', this.tc_microcell);
+    localStorage.setItem('tc_microcell', this.tc_microcell);
   }
 
   onItemChange3(value: any) {
     this.tc_leather = value;
-    localStorage.setItem('tc_leather_options', this.tc_leather);
+    localStorage.setItem('tc_leather_choices', this.tc_leather);
   }
 
   onItemChange4(value: any) {
     this.tc_evaperferated = value;
-    localStorage.setItem('tc_evaperferated_options', this.tc_evaperferated);
+    localStorage.setItem('tc_eva_perfeated', this.tc_evaperferated);
   }
 
   onItemChange5(value: any) {
     this.tc_xstatic = value;
-    localStorage.setItem('tc_xstatic_options', this.tc_xstatic);
+    localStorage.setItem('tc_x_static', this.tc_xstatic);
   }
 
   onItemChange6(value: any) {
     this.tc_suedo = value;
-    localStorage.setItem('tc_sudeo_options', this.tc_suedo);
+    localStorage.setItem('tc_suedo', this.tc_suedo);
   }
 
   // Modifications
@@ -295,19 +297,19 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'heel_cusion_left');
   }
 
-  met_pad_right_change(value: any) {
-    this.test(value, 'met_pad_right');
+  met_pad_right_no_change(value: any) {
+    this.test(value, 'met_pad_right_no');
   }
   met_pad_left_change(value: any) {
     this.test(value, 'met_pad_left');
   }
 
-  bet_bar_pad_right_change(value: any) {
-    this.test(value, 'bet_bar_pad_right');
+  met_bar_pad_right_no_change(value: any) {
+    this.test(value, 'met_bar_pad_right_no');
   }
 
-  bet_bar_pad_left_change(value: any) {
-    this.test(value, 'bet_bar_pad_left');
+  met_bar_pad_left_no_change(value: any) {
+    this.test(value, 'met_bar_pad_left_no');
   }
 
   letral_clip_right_change(value: any) {
@@ -326,12 +328,12 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'toe_crest_left');
   }
 
-  cubiod_pad_right_change(value: any) {
-    this.test2(value.target.checked, 'cubiod_pad_right');
+  cuboid_pad_right_change(value: any) {
+    this.test2(value.target.checked, 'cuboid_pad_right');
   }
 
-  cubiod_pad_left_change(value: any) {
-    this.test2(value.target.checked, 'cubiod_pad_left');
+  cuboid_pad_left_change(value: any) {
+    this.test2(value.target.checked, 'cuboid_pad_left');
   }
 
   high_medial_flang_right_change(value: any) {
@@ -342,12 +344,12 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'high_medial_flang_left');
   }
 
-  heel_lift_right_change(value: any) {
-    this.test(value, 'heel_lift_right');
+  heel_lift_right_no_change(value: any) {
+    this.test(value, 'heel_lift_right_no');
   }
 
-  heel_lift_left_change(value: any) {
-    this.test(value, 'heel_lift_left');
+  heel_lift_left_no_change(value: any) {
+    this.test(value, 'heel_lift_left_no');
   }
   reinforced_arch_right_change(value: any) {
     this.test2(value.target.checked, 'reinforced_arch_right');
@@ -364,12 +366,12 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'rear_foot_posting_left');
   }
 
-  navicular_pac_right_change(value: any) {
-    this.test2(value.target.checked, 'navicular_pac_right');
+  navicular_pad_right_change(value: any) {
+    this.test2(value.target.checked, 'navicular_pad_right');
   }
 
-  navicular_pac_left_change(value: any) {
-    this.test2(value.target.checked, 'navicular_pac_left');
+  navicular_pad_left_change(value: any) {
+    this.test2(value.target.checked, 'navicular_pad_left');
   }
 
   scaphoid_pad_right_change(value: any) {
@@ -380,7 +382,7 @@ export class SubDetailsComponent implements OnInit {
     this.test2(value.target.checked, 'scaphoid_pad_left');
   }
   reverse_morton_extension_right_change(value: any) {
-    this.test2(value.target.checked, 'reverse_morton_extension');
+    this.test2(value.target.checked, 'reverse_morton_extension_right');
   }
 
   reverse_morton_extension_left_change(value: any) {
@@ -394,41 +396,41 @@ export class SubDetailsComponent implements OnInit {
   morton_extension_left_change(value: any) {
     this.test2(value.target.checked, 'morton_extension_left');
   }
-  u_cut_out_right_change(value: any) {
-    this.test(value, 'u_cut_out_right');
+  u_cut_out_right_no_change(value: any) {
+    this.test(value, 'u_cut_out_right_no');
   }
 
-  u_cut_out_left_change(value: any) {
-    this.test(value, 'u_cut_out_left');
+  u_cut_out_left_no_change(value: any) {
+    this.test(value, 'u_cut_out_left_no');
   }
-  extrensic_fore_foot_position_right_change(value: any) {
-    this.test(value, 'extrensic_fore_foot_position_right');
-  }
-
-  extrensic_fore_foot_position_left_change(value: any) {
-    this.test(value, 'extrensic_fore_foot_position_left');
+  extrensic_fore_foot_position_right_no_change(value: any) {
+    this.test(value, 'extrensic_fore_foot_position_right_no');
   }
 
-  extrensic_rare_foot_position_right_change(value: any) {
-    this.test(value, 'extrensic_rare_foot_position_right');
+  extrensic_fore_foot_position_left_no_change(value: any) {
+    this.test(value, 'extrensic_fore_foot_position_left_no');
   }
 
-  extrensic_rare_foot_position_left_change(value: any) {
-    this.test(value, 'extrensic_rare_foot_position_left');
+  extrensic_rare_foot_position_right_no_change(value: any) {
+    this.test(value, 'extrensic_rare_foot_position_right_no');
+  }
+
+  extrensic_rare_foot_position_left_no_change(value: any) {
+    this.test(value, 'extrensic_rare_foot_position_left_no');
   }
 
   // MIDDLE LAYER 
   onItemChangemicrocell(value: any) {
     this.mi_microcell = value;
-    localStorage.setItem('mi_microcell_options', this.mi_microcell);
+    localStorage.setItem('tu_microsell', this.mi_microcell);
   }
   onItemChangesuede(value: any) {
     this.mi_suede = value;
-    localStorage.setItem('mi_suede_options', this.mi_suede);
+    localStorage.setItem('tu_suede', this.mi_suede);
   }
   onItemChangevinyl(value: any) {
     this.mi_vinyl = value;
-    localStorage.setItem('mi_vinyl_options', this.mi_vinyl);
+    localStorage.setItem('tu_vinyl', this.mi_vinyl);
   }
 
 

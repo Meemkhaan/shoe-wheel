@@ -3,6 +3,7 @@
     <button class="btn btn-danger">Next</button>
     <button class="btn btn-danger">Prev</button>
   </div>
+
   <div class="row justify-content-center align-items-center">
     <div class="col-md-7">
       <div style="margin-top: 15px; padding: 55px 40px 250px 40px">
@@ -259,8 +260,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="met_pad_right"
-                    (input)="met_pad_right_change($event.target.value)"
+                    [value]="met_pad_right_no"
+                    (input)="met_pad_right_no_change($event.target.value)"
                   />
                   <label class="form-check-label"> Right </label>
                 </div>
@@ -273,8 +274,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="bet_bar_pad_left"
-                    (input)="bet_bar_pad_left_change($event.target.value)"
+                    [value]="met_bar_pad_left_no"
+                    (input)="met_bar_pad_left_no_change($event.target.value)"
                   />
                   Left
                 </div>
@@ -284,8 +285,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="bet_bar_pad_right"
-                    (input)="bet_bar_pad_right_change($event.target.value)"
+                    [value]="met_bar_pad_right_no"
+                    (input)="met_bar_pad_right_no_change($event.target.value)"
                   />
                   Right
                 </div>
@@ -348,8 +349,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    [checked]="cubiod_pad_left ? true : false"
-                    (change)="cubiod_pad_left_change($event)"
+                    [checked]="cuboid_pad_left ? true : false"
+                    (change)="cuboid_pad_left_change($event)"
                   />
                   Left
                 </div>
@@ -359,8 +360,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    [checked]="cubiod_pad_right ? true : false"
-                    (change)="cubiod_pad_right_change($event)"
+                    [checked]="cuboid_pad_right ? true : false"
+                    (change)="cuboid_pad_right_change($event)"
                   />
                   Right
                 </div>
@@ -398,8 +399,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="heel_lift_left"
-                    (input)="heel_lift_left_change($event.target.value)"
+                    [value]="heel_lift_left_no"
+                    (input)="heel_lift_left_no_change($event.target.value)"
                   />
                   Left
                 </div>
@@ -409,8 +410,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="heel_lift_right"
-                    (input)="heel_lift_right_change($event.target.value)"
+                    [value]="heel_lift_right_no"
+                    (input)="heel_lift_right_no_change($event.target.value)"
                   />
                   Right
                 </div>
@@ -473,8 +474,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    [checked]="navicular_pac_left ? true : false"
-                    (change)="navicular_pac_left_change($event)"
+                    [checked]="navicular_pad_left ? true : false"
+                    (change)="navicular_pad_left_change($event)"
                   />
                   Left
                 </div>
@@ -484,8 +485,8 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    [checked]="navicular_pac_right ? true : false"
-                    (change)="navicular_pac_right_change($event)"
+                    [checked]="navicular_pad_right ? true : false"
+                    (change)="navicular_pad_right_change($event)"
                   />
                   Right
                 </div>
@@ -573,8 +574,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="u_cut_out_right"
-                    (input)="u_cut_out_right_change($event.target.value)"
+                    [value]="u_cut_out_right_no"
+                    (input)="u_cut_out_right_no_change($event.target.value)"
                   />
                   Right
                 </div>
@@ -584,8 +585,8 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="u_cut_out_left"
-                    (input)="u_cut_out_left_change($event.target.value)"
+                    [value]="u_cut_out_left_no"
+                    (input)="u_cut_out_left_no_change($event.target.value)"
                   />
                   Left
                 </div>
@@ -598,9 +599,9 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="extrensic_fore_foot_position_right"
+                    [value]="extrensic_fore_foot_position_right_no"
                     (input)="
-                      extrensic_fore_foot_position_right_change(
+                      extrensic_fore_foot_position_right_no_change(
                         $event.target.value
                       )
                     "
@@ -613,9 +614,9 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="extrensic_fore_foot_position_left"
+                    [value]="extrensic_fore_foot_position_left_no"
                     (input)="
-                      extrensic_fore_foot_position_left_change(
+                      extrensic_fore_foot_position_left_no_change(
                         $event.target.value
                       )
                     "
@@ -631,9 +632,9 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="extrensic_rare_foot_position_right"
+                    [value]="extrensic_rare_foot_position_right_no"
                     (input)="
-                      extrensic_rare_foot_position_right_change(
+                      extrensic_rare_foot_position_right_no_change(
                         $event.target.value
                       )
                     "
@@ -646,9 +647,9 @@
                   <input
                     class="input-sm"
                     type="number"
-                    [value]="extrensic_rare_foot_position_left"
+                    [value]="extrensic_rare_foot_position_left_no"
                     (input)="
-                      extrensic_rare_foot_position_left_change(
+                      extrensic_rare_foot_position_left_no_change(
                         $event.target.value
                       )
                     "

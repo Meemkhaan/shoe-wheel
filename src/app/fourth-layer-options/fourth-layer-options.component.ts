@@ -180,10 +180,10 @@ export class FourthLayerOptionsComponent implements OnInit {
     );
     //
     this.kirbey_skive_medical_position_left = localStorage.getItem(
-      'kirbey_skive_medical_position_left'
+      'kirbey_skive_medial_position_left'
     );
     this.kirbey_skive_medical_position_left_no = localStorage.getItem(
-      'kirbey_skive_medical_position_left_no'
+      'kirbey_skive_medial_position_left_no'
     );
     this.kirbey_skive_medical_position_right = localStorage.getItem(
       'kirbey_skive_medical_position_right'
@@ -349,7 +349,7 @@ export class FourthLayerOptionsComponent implements OnInit {
     
   }
   kirbey_skive_medical_position_left_change(value: any) {
-    this.test2(value.target.checked, 'kirbey_skive_medical_position_left');
+    this.test2(value.target.checked, 'kirbey_skive_medial_position_left');
     console.log(value.target.checked);
   }
   kirbey_skive_medical_position_right_no_change(value: any) {
@@ -357,7 +357,7 @@ export class FourthLayerOptionsComponent implements OnInit {
     
   }
   kirbey_skive_medical_position_left_no_change(value: any) {
-    this.test(value, 'kirbey_skive_medical_position_left');
+    this.test(value, 'kirbey_skive_medial_position_left');
   }
 
   //

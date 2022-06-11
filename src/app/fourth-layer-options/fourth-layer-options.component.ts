@@ -186,10 +186,10 @@ export class FourthLayerOptionsComponent implements OnInit {
       'kirbey_skive_medial_position_left_no'
     );
     this.kirbey_skive_medical_position_right = localStorage.getItem(
-      'kirbey_skive_medical_position_right'
+      'kirbey_skive_medial_position_right'
     );
     this.kirbey_skive_medical_position_right_no = localStorage.getItem(
-      'kirbey_skive_medical_position_right_no'
+      'kirbey_skive_medial_position_right_no'
     );
   }
 
@@ -243,7 +243,7 @@ export class FourthLayerOptionsComponent implements OnInit {
   tcsc_cusion_change(value: any, values: any) {
     if (values == 'none' && value.target.checked == true) {
       console.log(values);
-      this.tcsc_cusion['none'] = 'none)';
+      this.tcsc_cusion['none'] = 'none';
     } else if (values == 'none' && value.target.checked == false) {
       delete this.tcsc_cusion['none'];
     }
@@ -336,15 +336,15 @@ export class FourthLayerOptionsComponent implements OnInit {
     console.log(value.target.checked);
   }
   kirbey_skive_lateral_position_right_no_change(value: any) {
-    this.test(value, 'kirbey_skive_lateral_position_right');
+    this.test(value, 'kirbey_skive_lateral_position_right_no');
     
   }
   kirbey_skive_lateral_position_left_no_change(value: any) {
-    this.test(value, 'kirbey_skive_lateral_position_left');
+    this.test(value, 'kirbey_skive_lateral_position_left_no');
   }
   //
   kirbey_skive_medical_position_right_change(value: any) {
-    this.test2(value.target.checked, 'kirbey_skive_medical_position_right');
+    this.test2(value.target.checked, 'kirbey_skive_medial_position_right');
     console.log(value.target.checked);
     
   }
@@ -353,11 +353,11 @@ export class FourthLayerOptionsComponent implements OnInit {
     console.log(value.target.checked);
   }
   kirbey_skive_medical_position_right_no_change(value: any) {
-    this.test(value, 'kirbey_skive_medical_position_right');
+    this.test(value, 'kirbey_skive_medial_position_right_no');
     
   }
   kirbey_skive_medical_position_left_no_change(value: any) {
-    this.test(value, 'kirbey_skive_medial_position_left');
+    this.test(value, 'kirbey_skive_medial_position_left_no');
   }
 
   //
@@ -367,4 +367,15 @@ export class FourthLayerOptionsComponent implements OnInit {
     { id: 3, value: '15 mm' },
     { id: 4, value: 'Other' },
   ];
+
+
+  prev(){
+    window.history.back()
+  }
+  next(){
+    window.history.forward();
+    
+  }
+
+
 }

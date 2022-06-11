@@ -492,4 +492,15 @@ export class SubDetailsComponent implements OnInit {
     { id: 1, value: 'Black' },
     { id: 2, value: 'Navy' },
   ];
+
+
+  prev(){
+    window.history.back()
+  }
+  next(){
+    window.history.forward();
+    
+  }
+
+
 }

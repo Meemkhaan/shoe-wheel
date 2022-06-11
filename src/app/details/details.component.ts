@@ -103,4 +103,14 @@ export class DetailsComponent implements OnInit {
     }
   }
 
+
+  prev(){
+    window.history.back()
+  }
+  next(){
+    window.history.forward();
+    
+  }
+
+
 }

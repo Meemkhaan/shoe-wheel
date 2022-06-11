@@ -33,7 +33,7 @@ body{
   border-radius: 50%;
   position: absolute;
   background: transparent;
-  box-shadow: 0 12px 24px 0 rgb(13 13 13 / 6%);
+  /* box-shadow: 0 12px 24px 0 rgb(13 13 13 / 6%); */
   animation: spin 25s  linear infinite reverse;
   text-decoration: none;
   border: 1px dashed #fff;

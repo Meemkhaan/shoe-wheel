@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="d-flex gap-3 py-4">
-    <button class="btn btn-danger">Next</button>
-    <button class="btn btn-danger">Prev</button>
+  <div class="d-flex gap-3 pt-3">
+    <button class="btn btn-danger"(click)="prev()">Prev</button>
+    <button class="btn btn-danger" (click)="next()">Next</button>
   </div>
   <div class="row justify-content-center align-items-center">
     <div class="col-md-7">
-      <div class="" style="margin-top: 15px; padding: 55px 40px 250px 40px">
+      <div class="" style="margin-top: 10px; padding: 35px 40px 250px 40px">
         <div id="container">
           <!--! DEEP HEEL CUP OPTIONS -->
           <div id="deep-heel">
@@ -432,7 +432,7 @@
                   type="number"
                   [value]="kirbey_skive_medical_position_right_no"
                   (input)="
-                    kirbey_skive_medical_position_left_no_change(
+                  kirbey_skive_medical_position_right_no_change(
                       $event.target.value
                     )
                   "
@@ -450,7 +450,7 @@
                   type="number"
                   [value]="kirbey_skive_medical_position_left_no"
                   (input)="
-                    kirbey_skive_medical_position_right_no_change(
+                    kirbey_skive_medical_position_left_no_change(
                       $event.target.value
                     )
                   "

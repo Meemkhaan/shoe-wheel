@@ -1,0 +1,18 @@
+.card-body{
+    max-height: 300px;
+    overflow-y: scroll;
+
+}
+
+/* Track */
+::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 7px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: #063536;
+    border-radius: 10px;
+  }

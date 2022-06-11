@@ -1,27 +1,49 @@
 <div class="bg-white">
-    <div class="card py-2">
-      <div class="card-header">
-        <h5>Summary</h5>
+  <div class="card">
+    <div class="card-body">
+      <h5>Summary</h5>
+    </div>
+    <div class="card-body">
+      <div *ngIf="topcovers_types != 0">
+        <h6>Ortotric Work Order</h6>
+        <ul>
+          <li *ngFor="let key of _.keys(topcovers_types)">
+            {{ key }} ({{ topcovers_types[key] }})
+          </li>
+        </ul>
       </div>
-      <div class="card-body">
-        <div class="">
-          <h6>Ortotric Work Order</h6>
-        </div>
-        <div class="">
-          <h6>Types of Orthotrics</h6>
-        </div>
-        <div class="">
-          <h6>Types of Underlay</h6>
-        </div>
-        <div class="">
-          <h6>Types of Top Covers</h6>
-        </div>
-        <div class="">
-          <h6>Types of Shell and Cushion</h6>
-        </div>
-        <div class="">
-          <h6>Modifications</h6>
-        </div>
+
+      <div *ngIf="deep_heel_cup != 0">
+        <h6>Types of Shell and Cushion</h6>
+        <span>Deep Heel Cup</span>
+        <ul>
+          <li *ngIf="deep_heel_cup != 0">{{ deep_heel_cup }}</li>
+        </ul>
       </div>
+      <div *ngIf="tcsc_length != 0">
+        <span>Length</span>
+        <ul>
+          <li *ngFor="let key of _.keys(tcsc_length)">
+            {{ tcsc_length[key] }}
+          </li>
+        </ul>
+        </div>
+      <div *ngIf="tcsc_cusion != 0">
+        <span>Cusion</span>
+        <ul>
+          <li *ngFor="let key of _.keys(tcsc_cusion)">
+            {{ tcsc_cusion[key] }}
+          </li>
+        </ul>
+        </div>
+      <div *ngIf="tcsc_types_of_shell != 0">
+        <span>Types of shell</span>
+        <ul>
+          <li *ngFor="let key of _.keys(tcsc_types_of_shell)">
+            {{ tcsc_types_of_shell[key] }}
+          </li>
+        </ul>
+        </div>
     </div>
   </div>
+</div>

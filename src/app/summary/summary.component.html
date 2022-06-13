@@ -13,11 +13,11 @@
         </ul>
       </div>
 
-      <div *ngIf="deep_heel_cup != 0">
+      <div *ngIf="deep_heel_cup?.length > 0">
         <h6>Types of Shell and Cushion</h6>
         <span>Deep Heel Cup</span>
         <ul>
-          <li *ngIf="deep_heel_cup != 0">{{ deep_heel_cup }}</li>
+          <li >{{ deep_heel_cup }}</li>
         </ul>
       </div>
       <div *ngIf="tcsc_length != 0">
@@ -41,6 +41,15 @@
         <ul>
           <li *ngFor="let key of _.keys(tcsc_types_of_shell)">
             {{ tcsc_types_of_shell[key] }}
+          </li>
+        </ul>
+        </div>
+
+      <div *ngIf="modification_types != 0">
+        <span>Modifications</span>
+        <ul>
+          <li *ngFor="let key of _.keys(modification_types)">
+            {{ key }} ({{ modification_types[key] }})
           </li>
         </ul>
         </div>

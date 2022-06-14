@@ -10,19 +10,14 @@ export class SummaryComponent implements OnInit {
   // topcovers_types: any;
   public topcovers_types: any = [];
   public modification_types: any = [];
-  public tcsc_length: any = [];
-  public tcsc_cusion: any = [];
+  public tcsc_length_types: any = [];
+  public tcsc_cusion_types: any = [];
   public tcsc_types_of_shell: any = [];
   deep_heel_cup: any;
   _: any = _;
   constructor() {}
 
   ngOnInit() {
-    this.initialize();
-    
-  }
-
-  initialize() {
     // Topcovers
     let {
       tc_x_static,
@@ -44,14 +39,20 @@ export class SummaryComponent implements OnInit {
       vinyl: tc_vinyl,
     };
     this.topcovers_types = _.pickBy(topcovers, _.identity);
-
+    
     // Types of Shell and Cushion
     let { deep_heel_cup, tcsc_length, tcsc_cusion, tcsc_types_of_shell } =
       localStorage;
-    this.deep_heel_cup = deep_heel_cup;
-    this.tcsc_length = JSON.parse(tcsc_length);
-    this.tcsc_cusion = JSON.parse(tcsc_cusion);
-    this.tcsc_types_of_shell = JSON.parse(tcsc_types_of_shell);
+
+    if (deep_heel_cup !== undefined) this.deep_heel_cup = deep_heel_cup;
+    if (tcsc_length !== undefined)
+      this.tcsc_length_types = JSON.parse(tcsc_length);
+    if (tcsc_cusion !== undefined)
+      this.tcsc_cusion_types = JSON.parse(tcsc_cusion);
+
+    if (tcsc_types_of_shell !== undefined)
+      this.tcsc_types_of_shell = JSON.parse(tcsc_types_of_shell);
+
 
     // Modifications
     let {
@@ -137,6 +138,11 @@ export class SummaryComponent implements OnInit {
     };
 
     this.modification_types = _.pickBy(modifications, _.identity);
+    // if(this.modification_types !== undefined) {
+    //   console.log(this.modification_types, );
+    // } else{
+    //   console.log(this.modification_types);
+    // }
 
     let top_covers_post: any = {
       tc_x_static,
@@ -147,10 +153,6 @@ export class SummaryComponent implements OnInit {
       tc_suedo,
       tc_vinyl,
     };
+    
   }
-  reloadPage(){
-    return setInterval(() => {
-      this.initialize()
-    },1000)
-  };
 }

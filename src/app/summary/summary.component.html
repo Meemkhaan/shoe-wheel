@@ -4,7 +4,7 @@
       <h5>Summary</h5>
     </div>
     <div class="card-body">
-      <div *ngIf="topcovers_types != 0">
+      <div *ngIf="(topcovers_types | keyvalue)?.length">
         <h6>Ortotric Work Order</h6>
         <ul>
           <li *ngFor="let key of _.keys(topcovers_types)">
@@ -13,46 +13,48 @@
         </ul>
       </div>
 
-      <div *ngIf="deep_heel_cup?.length > 0">
+      <div class="">
         <h6>Types of Shell and Cushion</h6>
-        <span>Deep Heel Cup</span>
-        <ul>
-          <li >{{ deep_heel_cup }}</li>
-        </ul>
+        <div *ngIf="deep_heel_cup?.length > 0">
+          <h6>Deep Heel Cup</h6>
+          <ul>
+            <li>{{ deep_heel_cup }}</li>
+          </ul>
+        </div>
+        <div *ngIf="(tcsc_length_types | keyvalue)?.length">
+          <h6>Length</h6>
+          <ul>
+            <li *ngFor="let key of _.keys(tcsc_length_types)">
+              {{ tcsc_length_types[key] }}
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="(tcsc_cusion_types | keyvalue)?.length">
+          <h6>Cusion</h6>
+          <ul>
+            <li *ngFor="let key of _.keys(tcsc_cusion_types)">
+              {{ tcsc_cusion_types[key] }}
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="(tcsc_types_of_shell | keyvalue)?.length">
+          <h6>Types of shell</h6>
+          <ul>
+            <li *ngFor="let key of _.keys(tcsc_types_of_shell)">
+              {{ tcsc_types_of_shell[key] }}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div *ngIf="tcsc_length != 0">
-        <span>Length</span>
-        <ul>
-          <li *ngFor="let key of _.keys(tcsc_length)">
-            {{ tcsc_length[key] }}
-          </li>
-        </ul>
-        </div>
-      <div *ngIf="tcsc_cusion != 0">
-        <span>Cusion</span>
-        <ul>
-          <li *ngFor="let key of _.keys(tcsc_cusion)">
-            {{ tcsc_cusion[key] }}
-          </li>
-        </ul>
-        </div>
-      <div *ngIf="tcsc_types_of_shell != 0">
-        <span>Types of shell</span>
-        <ul>
-          <li *ngFor="let key of _.keys(tcsc_types_of_shell)">
-            {{ tcsc_types_of_shell[key] }}
-          </li>
-        </ul>
-        </div>
 
-      <div *ngIf="modification_types != 0">
-        <span>Modifications</span>
+      <div *ngIf="(modification_types | keyvalue)?.length">
+        <h6>Modifications</h6>
         <ul>
           <li *ngFor="let key of _.keys(modification_types)">
             {{ key }} ({{ modification_types[key] }})
           </li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
 </div>

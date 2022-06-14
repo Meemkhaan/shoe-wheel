@@ -9,9 +9,7 @@ export class AppComponent implements OnInit {
   title = 'shoe-wheel';
 
   ngOnInit() {
-    window.onunload  = function() {
-        localStorage.clear();
-    };
+
   }
   
 }

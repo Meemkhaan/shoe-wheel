@@ -1,9 +1,12 @@
-.card-body{
-    max-height: 300px;
+#htmlData{
+    max-height: 260px;
     overflow-y: scroll;
 
 }
+#htmlData1{
+  /* display:none; */
 
+}
 /* Track */
 ::-webkit-scrollbar {
     border-radius: 10px;
@@ -16,3 +19,5 @@
     background: #063536;
     border-radius: 10px;
   }
+
+  /* .html2canvas-container { width: 3000px !important; height: 3000px !important; } */

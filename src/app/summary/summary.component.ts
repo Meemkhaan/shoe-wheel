@@ -1,24 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as _ from 'lodash';
-
+import jsPDF from 'jspdf';
+import * as jsPDF from 'jspdf'
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
   styleUrls: ['./summary.component.css'],
 })
 export class SummaryComponent implements OnInit {
-  // topcovers_types: any;
+  @ViewChild('htmlDatas', { static: false }) pdfTable!: ElementRef;
+
+  _: any = _;
   public topcovers_types: any = [];
   public modification_types: any = [];
   public tcsc_length_types: any = [];
   public tcsc_cusion_types: any = [];
   public tcsc_types_of_shell: any = [];
+  public sheel_modifications: any = [];
   deep_heel_cup: any;
-  _: any = _;
+  //
+  tu_suede: any;
+  tu_microcell: any;
+  tu_vinyl: any;
+
   constructor() {}
 
   ngOnInit() {
-    // Topcovers
+    //! Topcovers
     let {
       tc_x_static,
       tc_microcell,
@@ -39,8 +47,7 @@ export class SummaryComponent implements OnInit {
       vinyl: tc_vinyl,
     };
     this.topcovers_types = _.pickBy(topcovers, _.identity);
-    
-    // Types of Shell and Cushion
+    //! Types of Shell and Cushion
     let { deep_heel_cup, tcsc_length, tcsc_cusion, tcsc_types_of_shell } =
       localStorage;
 
@@ -53,8 +60,7 @@ export class SummaryComponent implements OnInit {
     if (tcsc_types_of_shell !== undefined)
       this.tcsc_types_of_shell = JSON.parse(tcsc_types_of_shell);
 
-
-    // Modifications
+    //! Modifications
     let {
       heel_spur_pad_right,
       heel_spur_pad_left,
@@ -95,8 +101,6 @@ export class SummaryComponent implements OnInit {
     } = localStorage;
 
     let modifications: any = {
-      'Heel Spur Pad Right': heel_spur_pad_right,
-      'Heel Spur Pad Left': heel_spur_pad_left,
       'Heel Cusion Right': heel_cusion_right,
       'Heel Cusion Left': heel_cusion_left,
       'Met Pad Right No': met_pad_right_no,
@@ -107,6 +111,8 @@ export class SummaryComponent implements OnInit {
       'Toe Crest Left': toe_crest_left,
       'Letral Clip Right': letral_clip_right,
       'Letral Clip Left': letral_clip_left,
+      'Heel Spur Pad Right': heel_spur_pad_right,
+      'Heel Spur Pad Left': heel_spur_pad_left,
       'Cubiod Pad Right': cuboid_pad_right,
       'Cuboid Pad Left': cuboid_pad_left,
       'High Medial Flang Right': high_medial_flang_right,
@@ -138,12 +144,66 @@ export class SummaryComponent implements OnInit {
     };
 
     this.modification_types = _.pickBy(modifications, _.identity);
-    // if(this.modification_types !== undefined) {
-    //   console.log(this.modification_types, );
-    // } else{
-    //   console.log(this.modification_types);
-    // }
 
+    //! Underlayer
+    let { tu_suede, tu_microcell, tu_vinyl } = localStorage;
+
+    if (tu_suede !== undefined) this.tu_suede = tu_suede;
+    if (tu_microcell !== undefined) this.tu_microcell = tu_microcell;
+    if (tu_vinyl !== undefined) this.tu_vinyl = tu_vinyl;
+
+    //! Sheel-Modifications
+
+    let {
+      heel_center_pocket_left,
+      heel_center_pocket_right,
+      first_meet_cut_out_left,
+      first_meet_cut_out_right,
+      first_ray_cut_out_left,
+      first_ray_cut_out_right,
+      fascia_grove_left,
+      fascia_grove_right,
+      induced_in_toening,
+      induced_out_toening,
+
+      kirbey_skive_medial_position_left,
+      kirbey_skive_medial_position_left_no,
+      kirbey_skive_medial_position_right,
+      kirbey_skive_medial_position_right_no,
+      kirbey_skive_lateral_position_left,
+      kirbey_skive_lateral_position_left_no,
+      kirbey_skive_lateral_position_right,
+      kirbey_skive_lateral_position_right_no,
+    } = localStorage;
+
+    let sheelTypes: any = {
+      'heel center pocket left': heel_center_pocket_left,
+      'heel center pocket right': heel_center_pocket_right,
+      'first meet cut out left': first_meet_cut_out_left,
+      'first meet cut out right': first_meet_cut_out_right,
+      'first ray cut out left': first_ray_cut_out_left,
+      'first ray cut out right': first_ray_cut_out_right,
+      'fascia grove left': fascia_grove_left,
+      'fascia grove right': fascia_grove_right,
+      'induced in toening': induced_in_toening,
+      'induced out toening': induced_out_toening,
+      'kirbey skivemedial position left': kirbey_skive_medial_position_left,
+      'kirbey skive medial position left no':
+        kirbey_skive_medial_position_left_no,
+      'kirbey skive medial position right': kirbey_skive_medial_position_right,
+      'kirbey skive medial position right no':
+        kirbey_skive_medial_position_right_no,
+      'kirbey skive lateral position left': kirbey_skive_lateral_position_left,
+      'kirbey skive lateral position left_no':
+        kirbey_skive_lateral_position_left_no,
+      'kirbey skive lateral position right':
+        kirbey_skive_lateral_position_right,
+      'kirbey skive lateral position right no':
+        kirbey_skive_lateral_position_right_no,
+    };
+    this.sheel_modifications = _.pickBy(sheelTypes, _.identity);
+
+    // FOr posting data in database
     let top_covers_post: any = {
       tc_x_static,
       tc_microcell,
@@ -153,6 +213,10 @@ export class SummaryComponent implements OnInit {
       tc_suedo,
       tc_vinyl,
     };
-    
+  }
+  openPDF() {
+    const doc = new jsPDF();
+    const pdfTable = this.pdfTable.nativeElement;
+
   }
 }

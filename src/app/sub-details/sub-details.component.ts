@@ -131,7 +131,7 @@ export class SubDetailsComponent implements OnInit {
     // MIDDLE LAYER 
     this.mi_suede = localStorage.getItem('tu_suede');
     this.mi_vinyl = localStorage.getItem('tu_vinyl');
-    this.mi_microcell = localStorage.getItem('tu_microsell');
+    this.mi_microcell = localStorage.getItem('tu_microcell');
 
     $(function () {
       $('.item').hide();
@@ -422,7 +422,7 @@ export class SubDetailsComponent implements OnInit {
   // MIDDLE LAYER 
   onItemChangemicrocell(value: any) {
     this.mi_microcell = value;
-    localStorage.setItem('tu_microsell', this.mi_microcell);
+    localStorage.setItem('tu_microcell', this.mi_microcell);
   }
   onItemChangesuede(value: any) {
     this.mi_suede = value;

@@ -3,12 +3,12 @@
     <div class="card-body">
       <h5>Summary</h5>
     </div>
-    <div class="card-body">
+    <div class="card-body" id="htmlData" #htmlDatas>
       <div *ngIf="(topcovers_types | keyvalue)?.length">
         <h6>Ortotric Work Order</h6>
         <ul>
           <li *ngFor="let key of _.keys(topcovers_types)">
-            {{ key }} ({{ topcovers_types[key] }})
+            {{ key }} ( {{ topcovers_types[key] }} )
           </li>
         </ul>
       </div>
@@ -55,6 +55,45 @@
           </li>
         </ul>
       </div>
+
+      <div
+        *ngIf="
+        tu_suede?.length > 0 ||
+        tu_microcell?.length > 0 ||
+        tu_vinyl?.length > 0
+        "
+      >
+        <h5>Middlelayer</h5>
+        <div *ngIf="tu_vinyl?.length > 0">
+          <h6>Vinyl</h6>
+          <ul>
+            <li>{{ tu_vinyl }}</li>
+          </ul>
+        </div>
+        <div *ngIf="tu_suede?.length > 0">
+          <h6>Suede</h6>
+          <ul>
+            <li>{{ tu_suede }}</li>
+          </ul>
+        </div>
+        <div *ngIf="tu_microcell?.length > 0">
+          <h6>Microcell</h6>
+          <ul>
+            <li>{{ tu_microcell }}</li>
+          </ul>
+        </div>
+      </div>
+      <!--  -->
+      <div *ngIf="(sheel_modifications | keyvalue)?.length">
+        <h6 class="text-capitalize">Sheel Modifications</h6>
+        <ul>
+          <li *ngFor="let key of _.keys(sheel_modifications)">
+            {{ key }} ({{ sheel_modifications[key] }})
+          </li>
+        </ul>
+      </div>
     </div>
+    
   </div>
+  <button class="btn btn-success btn-block m-3" (click)="openPDF()">Download PDF</button>
 </div>

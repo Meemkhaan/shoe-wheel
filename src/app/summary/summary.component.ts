@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as _ from 'lodash';
-import jsPDF from 'jspdf';
-import * as jsPDF from 'jspdf'
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -214,9 +212,5 @@ export class SummaryComponent implements OnInit {
       tc_vinyl,
     };
   }
-  openPDF() {
-    const doc = new jsPDF();
-    const pdfTable = this.pdfTable.nativeElement;
-
-  }
+ 
 }
